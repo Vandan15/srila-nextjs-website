@@ -39,3 +39,11 @@ img.mfp-img {
 #slides img {
   height: 100%;
 }
+
+/* Contact form focus styles */
+.input__field:focus {
+  outline: 1px solid #007bff !important;
+  /* outline-offset: 2px !important; */
+  border-color: #007bff !important;
+  transition: all 0.3s ease;
+}

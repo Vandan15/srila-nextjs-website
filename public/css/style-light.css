@@ -502,7 +502,7 @@ a:focus {
 
 .input__field {
     width: 100%;
-    border: 2px solid #999;
+    border: 1px solid #999;
     padding: 5px 10px;
     -webkit-transition: all .5s ease;
     -o-transition: all .5s ease;
@@ -511,6 +511,7 @@ a:focus {
     z-index: 1;
     background-color: transparent;
     color: #222;
+    border-radius: 4px;
 }
 
 .input__field.cf-error {
