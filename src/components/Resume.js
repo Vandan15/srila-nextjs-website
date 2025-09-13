@@ -16,7 +16,7 @@ const Resume = () => {
     <SectionContainer
       pageId="resume"
       pageIcon={"lnr lnr-license"}
-      pageTitle={"My Resume."}
+      pageTitle={"My Resume"}
     >
       <div
         className="row mb-20"

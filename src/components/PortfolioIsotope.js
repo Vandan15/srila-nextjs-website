@@ -179,7 +179,7 @@ const PortfolioIsotope = () => {
       <SectionContainer
         pageId="portfolio"
         pageIcon={"lnr lnr-briefcase"}
-        pageTitle="Portfolio."
+        pageTitle="Portfolio"
       >
         {/*Portfolio Filter*/}
         {/* <div className="row">

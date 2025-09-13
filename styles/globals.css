@@ -4,6 +4,24 @@
 @import "swiper/css/scrollbar";
 @import "swiper/css/effect-fade";
 
+/* Poppins Font Global Application */
+* {
+  font-family: var(--font-poppins), sans-serif !important;
+}
+
+body,
+html {
+  font-family: var(--font-poppins), sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-poppins), sans-serif !important;
+}
+
+p, span, div, a, button, input, textarea, select {
+  font-family: var(--font-poppins), sans-serif !important;
+}
+
 /* image popup */
 img.mfp-img {
   box-shadow: 0 0 8px rgb(0 0 0 / 60%);
@@ -46,4 +64,218 @@ img.mfp-img {
   /* outline-offset: 2px !important; */
   border-color: #007bff !important;
   transition: all 0.3s ease;
+}
+
+/* Swiper Slide Overlays */
+.slide-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.3) 50%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+  display: flex;
+  align-items: flex-end;
+  z-index: 2;
+}
+
+.slide-content {
+  padding: 60px 40px;
+  color: white;
+  width: 100%;
+  max-width: 600px;
+}
+
+.slide-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.slide-description {
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 1.6;
+  margin: 0 0 1rem 0;
+  opacity: 0.95;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.slide-hint {
+  /* margin-top: 1rem; */
+  opacity: 0.8;
+  margin-bottom: 1rem;
+}
+
+.slide-hint span {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.9);
+  padding: 8px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.1);
+  display: inline-block;
+  transition: all 0.3s ease;
+  animation: pulse 2s infinite;
+}
+
+.slide-hint span:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+/* Click interaction styling */
+.slide-overlay:hover {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.4) 50%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+}
+
+.slide-overlay:active {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(0, 0, 0, 0.5) 50%,
+    rgba(0, 0, 0, 0.9) 100%
+  );
+}
+
+/* Custom Swiper Navigation Buttons */
+.custom-nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  z-index: 1000 !important;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto !important;
+  user-select: none;
+}
+
+.swiper-button-prev.custom-nav-btn {
+  left: 20px;
+}
+
+.swiper-button-next.custom-nav-btn {
+  right: 20px;
+}
+
+.custom-nav-btn:hover {
+  background: rgba(0, 0, 0, 0.8);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.custom-nav-btn:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .slide-content {
+    padding: 40px 20px;
+    max-width: 100%;
+  }
+
+  .slide-title {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .slide-description {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .custom-nav-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .swiper-button-prev.custom-nav-btn {
+    left: 15px;
+  }
+
+  .swiper-button-next.custom-nav-btn {
+    right: 15px;
+  }
+
+  .custom-nav-btn svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .slide-hint span {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .slide-content {
+    padding: 30px 15px;
+  }
+
+  .slide-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .slide-description {
+    font-size: 0.9rem;
+  }
+
+  .custom-nav-btn {
+    width: 35px;
+    height: 35px;
+  }
+
+  .swiper-button-prev.custom-nav-btn {
+    left: 10px;
+  }
+
+  .swiper-button-next.custom-nav-btn {
+    right: 10px;
+  }
+
+  .custom-nav-btn svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .slide-hint span {
+    font-size: 0.7rem;
+    padding: 5px 10px;
+  }
 }

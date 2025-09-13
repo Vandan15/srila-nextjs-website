@@ -1,25 +1,39 @@
 import { useContext, useState } from "react";
 import { WatsonContext } from "../context/Context";
 import useClickOutside from "../useClickOutside";
-import { FacebookLogo } from "@phosphor-icons/react";
-import { TwitterLogo } from "@phosphor-icons/react";
-import { YoutubeLogo } from "@phosphor-icons/react";
-import { DribbbleLogo } from "@phosphor-icons/react";
-import { BehanceLogo } from "@phosphor-icons/react";
+import {
+  BriefcaseIcon,
+  EnvelopeSimpleIcon,
+  FacebookLogoIcon,
+  FoldersIcon,
+  HouseLineIcon,
+  UserIcon,
+} from "@phosphor-icons/react";
+import { TwitterLogoIcon } from "@phosphor-icons/react";
+import { YoutubeLogoIcon } from "@phosphor-icons/react";
+import { DribbbleLogoIcon } from "@phosphor-icons/react";
 
 const menus = [
-  { id: 1, icon: "lnr lnr-home", name: "Home", href: "home" },
+  { id: 1, icon: <HouseLineIcon size={22} />, name: "Home", href: "home" },
   {
     id: 2,
-    icon: "lnr lnr-briefcase",
+    icon: <FoldersIcon size={22} />,
     name: "Exhibitions",
     href: "exhibitions",
   },
-  { id: 3, icon: "lnr lnr-user", name: "About Me", href: "about" },
-  // { id: 3, icon: "lnr lnr-license", name: "Resume", href: "resume" },
-  { id: 4, icon: "lnr lnr-briefcase", name: "Portfolio", href: "portfolio" },
-  // { id: 5, icon: "lnr lnr-book", name: "Blog", href: "blog" },
-  { id: 6, icon: "lnr lnr-envelope", name: "Contact", href: "contact" },
+  { id: 3, icon: <UserIcon size={22} />, name: "About Me", href: "about" },
+  {
+    id: 4,
+    icon: <BriefcaseIcon size={22} />,
+    name: "Portfolio",
+    href: "portfolio",
+  },
+  {
+    id: 6,
+    icon: <EnvelopeSimpleIcon size={22} />,
+    name: "Contact",
+    href: "contact",
+  },
 ];
 
 const Sidebar = () => {
@@ -58,9 +72,7 @@ const Sidebar = () => {
                       menu.href === section ? "active" : ""
                     }`}
                   >
-                    <span className="nav-menu-icon">
-                      <i className={menu.icon} />
-                    </span>
+                    <span className="nav-menu-icon">{menu.icon}</span>
                     {menu.name}{" "}
                   </a>{" "}
                 </li>
@@ -73,29 +85,29 @@ const Sidebar = () => {
             <ul className="social">
               <li>
                 <a href="#">
-                  <FacebookLogo size={20} />
+                  <FacebookLogoIcon size={20} />
                 </a>
               </li>
               <li>
                 <a href="#">
-                  <TwitterLogo size={20} />
+                  <TwitterLogoIcon size={20} />
                 </a>
               </li>
               <li>
                 <a href="#">
-                  <YoutubeLogo size={20} />
+                  <YoutubeLogoIcon size={20} />
                 </a>
               </li>
               <li>
                 <a href="#">
-                  <DribbbleLogo size={20} />
+                  <DribbbleLogoIcon size={20} />
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a href="#">
-                  <BehanceLogo size={20} />
+                  <BehanceLogoIco size={20} />
                 </a>
-              </li>
+              </li> */}
             </ul>
             {/*Copyright Text*/}
             <div className="copy">
