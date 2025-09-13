@@ -20,11 +20,11 @@
 }
 
 .page-heading h2 {
-  color: #e74f1d;
+  color: #bf1e27;
 }
 
 .page-heading .icon {
-  color: #e74f1d;
+  color: #bf1e27;
 }
 
 .subheading h3 {
@@ -48,11 +48,12 @@
 }
 
 .btn-main {
-  border-color: #e74f1d !important;
-  color: #e74f1d;
+  border-color: #bf1e27 !important;
+  border-radius: 50px;
+  color: #bf1e27;
 }
 .btn-main:after {
-  background-color: #e74f1d;
+  background-color: #bf1e27;
 }
 
 .services .service-item .icon {
