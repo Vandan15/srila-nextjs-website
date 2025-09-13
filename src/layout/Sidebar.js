@@ -17,24 +17,24 @@ import { YoutubeLogoIcon } from "@phosphor-icons/react";
 import { DribbbleLogoIcon } from "@phosphor-icons/react";
 
 const menus = [
-  { id: 1, icon: <HouseLineIcon size={22} />, name: "Home", href: "home" },
+  { id: 1, icon: <HouseLineIcon size={20} />, name: "Home", href: "home" },
   
   {
     id: 4,
-    icon: <BriefcaseIcon size={22} />,
+    icon: <BriefcaseIcon size={20} />,
     name: "Portfolio",
     href: "portfolio",
   },
   {
     id: 2,
-    icon: <FoldersIcon size={22} />,
+    icon: <FoldersIcon size={20} />,
     name: "Exhibitions",
     href: "exhibitions",
   },
-  { id: 3, icon: <UserIcon size={22} />, name: "About Me", href: "about" },
-  {
+  { id: 3, icon: <UserIcon size={20} />, name: "About Me", href: "about" },
+  { 
     id: 6,
-    icon: <EnvelopeSimpleIcon size={22} />,
+    icon: <EnvelopeSimpleIcon size={20} />,
     name: "Contact",
     href: "contact",
   },
@@ -54,7 +54,7 @@ const Sidebar = () => {
         {/*Mobile Header*/}
         <div className="header-mobile">
           <a className="header-toggle" onClick={() => setToggle(!toggle)}>
-            <ListIcon color="white" size={22}/>
+            <ListIcon color="white" size={20}/>
           </a>
           <h2>Srila Mookherjee</h2>
         </div>
