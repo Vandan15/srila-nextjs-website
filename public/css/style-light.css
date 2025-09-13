@@ -706,18 +706,19 @@ blockquote {
   top: 0;
   height: 100%;
   z-index: 300;
-  width: 200px;
-  background-color: #2a2b30;
+  width: 240px;
+  background-color: #ffffff;
   overflow: auto;
   left: 0;
   overflow-x: hidden;
   text-align: center;
   z-index: 999;
-  border-right: 1px solid #202125;
+  border-right: 1px solid #bf1e271c;
 }
 
 .header-main .image-container {
   position: relative;
+  padding: 6px;
 }
 
 .header-main .image-container img {
@@ -754,7 +755,7 @@ blockquote {
   font-size: 12px;
   letter-spacing: 1px;
   text-transform: uppercase;
-  border-bottom: 1px solid #202125;
+  border-bottom: 1px solid #e74f1d3b;
   text-align: left;
 }
 
@@ -763,7 +764,7 @@ blockquote {
   line-height: 45px;
   padding-left: 70px;
   position: relative;
-  color: #999;
+  color: #bf1e27;
 }
 
 .header-main nav.nav-menu ul li a span.nav-menu-icon {
@@ -774,7 +775,9 @@ blockquote {
 }
 
 .header-main nav.nav-menu ul li a.active {
-  color: #fff;
+  color: #ffffff;
+  background-color: #bf1e27;
+  transition: all 0.3s ease-in-out;
 }
 
 header .header-mobile {
@@ -783,7 +786,7 @@ header .header-mobile {
   left: 0;
   height: 50px;
   width: 100%;
-  background-color: #2a2b30;
+  background-color: #bf1e27;
   z-index: 10;
   display: none;
   -webkit-transition: all 0.3s ease-in-out;
@@ -811,7 +814,7 @@ header .header-mobile .header-toggle {
   cursor: pointer;
   width: 50px;
   text-align: center;
-  border-left: 1px solid #3b3c43;
+  border-left: 0px solid #3b3c43;
   float: right;
 }
 
@@ -836,7 +839,7 @@ header .header-mobile .header-toggle i {
 }
 
 .header-main .nav-footer .social li a {
-  color: #777;
+  color: #bf1e27;
   -webkit-transition: color 0.2s ease;
   -o-transition: color 0.2s ease;
   transition: color 0.2s ease;
@@ -852,13 +855,13 @@ header .header-mobile .header-toggle i {
 
 .header-main .nav-footer .copy p {
   font-size: 12px;
-  color: #777;
+  color: #bf1e27;
 }
 
 .site-main {
   position: absolute;
   top: 0;
-  left: 200px;
+  left: 240px;
   right: 0;
   width: auto;
   height: 100%;
@@ -1786,7 +1789,7 @@ header .header-mobile .header-toggle i {
 
 @media screen and (max-width: 767px) {
   header .header-main {
-    left: -200px;
+    left: -240px;
     -webkit-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;

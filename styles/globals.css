@@ -279,3 +279,10 @@ img.mfp-img {
     padding: 5px 10px;
   }
 }
+
+@media (max-width: 768px) {
+.swiper {
+  img {
+    object-fit: cover;
+  }
+}}

@@ -7,6 +7,9 @@ import {
   FacebookLogoIcon,
   FoldersIcon,
   HouseLineIcon,
+  LineSegmentIcon,
+  ListIcon,
+  SidebarIcon,
   UserIcon,
 } from "@phosphor-icons/react";
 import { TwitterLogoIcon } from "@phosphor-icons/react";
@@ -15,6 +18,13 @@ import { DribbbleLogoIcon } from "@phosphor-icons/react";
 
 const menus = [
   { id: 1, icon: <HouseLineIcon size={22} />, name: "Home", href: "home" },
+  
+  {
+    id: 4,
+    icon: <BriefcaseIcon size={22} />,
+    name: "Portfolio",
+    href: "portfolio",
+  },
   {
     id: 2,
     icon: <FoldersIcon size={22} />,
@@ -22,12 +32,6 @@ const menus = [
     href: "exhibitions",
   },
   { id: 3, icon: <UserIcon size={22} />, name: "About Me", href: "about" },
-  {
-    id: 4,
-    icon: <BriefcaseIcon size={22} />,
-    name: "Portfolio",
-    href: "portfolio",
-  },
   {
     id: 6,
     icon: <EnvelopeSimpleIcon size={22} />,
@@ -50,14 +54,14 @@ const Sidebar = () => {
         {/*Mobile Header*/}
         <div className="header-mobile">
           <a className="header-toggle" onClick={() => setToggle(!toggle)}>
-            <i className="fas fa-bars" />
+            <ListIcon color="white" size={22}/>
           </a>
           <h2>Srila Mookherjee</h2>
         </div>
         {/*Main Header*/}
         <div className="header-main" data-simplebar="" ref={domNode}>
           <div className="image-container">
-            <h2 className="header-name">Srila Mookherjee</h2>
+            {/* <h2 className="header-name">Srila Mookherjee</h2> */}
             <img src="img/srila_logo.jpg" alt="profile-pic" />
           </div>
           {/*Nav Menus*/}
@@ -67,7 +71,10 @@ const Sidebar = () => {
                 <li key={menu.id}>
                   <a
                     href={`#${menu.href}`}
-                    onClick={() => changeSection(menu.href)}
+                    onClick={() => {
+                      changeSection(menu.href);
+                        setToggle(false);
+                    }}
                     className={`pt-link ${
                       menu.href === section ? "active" : ""
                     }`}
