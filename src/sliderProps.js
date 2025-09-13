@@ -1,23 +1,5 @@
-import SwiperCore, {
-  Autoplay,
-  EffectCreative,
-  EffectFade,
-  Grid,
-  Mousewheel,
-  Navigation,
-  Pagination,
-  Virtual,
-} from "swiper";
-SwiperCore.use([
-  Mousewheel,
-  Pagination,
-  Navigation,
-  EffectFade,
-  Autoplay,
-  Grid,
-  EffectCreative,
-  Virtual,
-]);
+// Modern Swiper doesn't need SwiperCore.use() anymore
+// Modules are imported and used directly in components
 
 export const clientSliderProps = {
   loop: true,
