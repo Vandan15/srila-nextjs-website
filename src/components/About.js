@@ -1,87 +1,133 @@
-import { Swiper, SwiperSlide } from "swiper/react";
 import SectionContainer from "../layout/SectionContainer";
-import { clientSliderProps, testimonialSliderProps } from "../sliderProps";
+import {
+  EnvelopeSimpleIcon,
+  HouseIcon,
+  MapPinAreaIcon,
+} from "@phosphor-icons/react";
 const About = () => {
   return (
     <SectionContainer
       pageId={"about"}
       pageIcon={"lnr lnr-user"}
-      pageTitle={"About Me."}
+      pageTitle={"About Us."}
     >
       <div className="row about mb-70">
         <div className="col-lg-8">
           {/*Personal Intro*/}
-          <h3 className="mb-20">UI/UX Designer &amp; Developer</h3>
+          <h3 className="mb-20">Artist bio and background</h3>
           <p>
-            Dolor reprehenderit aut repudiandae maiores recusandae. Consequatur
-            dolor nisi labore commodi ipsa? Excepturi velit laboriosam at
-            voluptatibus cupiditate est vel. Dolorem praesentium itaque fugiat
-            placeat quas consequatur? Obcaecati natus rerum
+            I first encountered the famed glassmakers of Murano as an
+            eleven-year-old girl on a family trip to Venice. From that moment,
+            the seed was sown. As a young adult, I was keen to explore this
+            medium but, due to the lack of available specialised education in
+            glass in India, I began my training with a diploma in Industrial
+            Design, specializing in Ceramics, from the National Institute of
+            Design. Inspired and encouraged by an amazing professor I continued
+            with my quest which first took me to Finnish Lapland and then
+            London, where a serendipitous meeting with glassmaker Anthony Stern
+            changed my life forever. I began as an apprentice in his studio and
+            after a spellbinding year of interning with him, I moved on to The
+            Glasshouse, a co-operative of 4 glassmakers based in Covent Garden,
+            London. There I had the opportunity to further explore the medium -
+            observing, learning and working with diverse artists and their
+            individual styles and techniques.
+          </p>
+          <h3 className="mb-20">Setting up the studio</h3>
+          <p>
+            In 1987, I returned to Calcutta, armed with a file of photographs,
+            technical drawings and detailed notes, determined to set up my own
+            studio, which would be the first studio glass atelier in India. It
+            took over two long years for my dream to become a reality. There
+            were hurdles at every turn but eventually from the furnace to the
+            annealing oven, the blowing irons to the workbench, from the cullet
+            to the colour, every piece of equipment was constructed
+            indigenously, and every scrap of raw material sourced locally. My
+            first studio space was a rented tin shed in the heart of the city, a
+            few kilometres from my home. Approximately 500 sq ft, it was at the
+            end of an unpaved lane which also housed a couple of taxi repair
+            garages. Over a decade later, I shifted my studio into a small house
+            nearby, allowing me to continue to expand, develop and experiment
+            with my art form.
+          </p>
+          <h3 className="mb-20">Artist philosophy</h3>
+          <p>
+            My work is inspired by my passion for both functional art as well as
+            for the vessel form - a creative combination of form with function,
+            craft with art. The vessel for me is a vehicle to bring to
+            expression my ideas and feelings. It exists to hold or contain, both
+            literally and metaphorically and is all encompassing in its
+            generosity - it receives, it holds, it gives.
           </p>
           <p>
-            Consectetur consectetur nesciunt nesciunt blanditiis amet? Quod quis
-            unde aliquid excepturi laudantium? Illo architecto aliquam velit
-            illo magnam neque perferendis sint Incidunt eius ipsa inventore
-            labore eos velit. Minus hic magni reiciendis necessitatibus ex
-            Quidem officia deleniti accusamus obcaecati dolores. Porro culpa
-            quibusdam impedit porro praesentium excepturi. Alias ab consequatur?
+            Though various influences have played their part, my work is not
+            derived from any particular personal, political or economic
+            narrative. It is primarily based on form, colour and the interplay
+            with its immediate environment and more instinctually, from the
+            natural world around us.
+          </p>
+          <p>
+            The spontaneity and impulsiveness of blowing glass suits my nature.
+            To me, it is an interactive negotiation between the material and the
+            maker, a compromise between what you want and what the glass
+            dictates. My personal approach to making is purely organic - I work
+            directly with the glass and in essence allow the ideas to flow as I
+            blow! While I can control the line and colour of any given piece,
+            the resulting form is ultimately a collaboration between my blowing
+            skills and the forces of nature.
           </p>
           {/*Signature Image*/}
-          <div className="signature mt-20">
+          {/* <div className="signature mt-20">
             <img src="img/signature-white.png" alt="" />
-          </div>
+          </div> */}
         </div>
         {/*Personal Info*/}
         <div className="col-lg-4">
           <div className="about-info">
-            <h3 className="mb-20">Personal Information</h3>
+            <h3 className="mb-20">Contact Information</h3>
             <ul>
               <li>
-                <span className="title">Name</span>
-                <span className="value">Philip Watson</span>
+                <span className="title">
+                  <HouseIcon size={20} />
+                </span>
+                <span className="value">
+                  Physical Address: 4C Bondel Road, Kolkata 700019
+                </span>
               </li>
               <li>
-                <span className="title">Age</span>
-                <span className="value">26 Years</span>
+                <span className="title">
+                  <MapPinAreaIcon size={20} />
+                </span>
+                <span className="value">
+                  Postal Address: 3A Lovelock Street, Kolkata 700019
+                </span>
               </li>
               <li>
-                <span className="title">Residence</span>
-                <span className="value">New York, USA</span>
-              </li>
-              <li>
-                <span className="title">Address</span>
-                <span className="value">123 Lorem Ipsum</span>
-              </li>
-              <li>
-                <span className="title">Email</span>
-                <span className="value">example@example.com</span>
-              </li>
-              <li>
-                <span className="title">Phone</span>
-                <span className="value">(+1) 123 456 7890</span>
-              </li>
-              <li>
-                <span className="title">Freelance</span>
-                <span className="value">Available</span>
+                <span className="title">
+                  <EnvelopeSimpleIcon size={20} />
+                </span>
+                <span className="value">
+                  <a href="mailto:srila.glass@gmail.com">
+                    srila.glass@gmail.com
+                  </a>
+                </span>
               </li>
             </ul>
-            <div className="resume-button mt-30">
+            {/* <div className="resume-button mt-30">
               <a className="btn-main" href="#">
                 Download Resume
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
       {/* About Info Row End*/}
       {/*Services Row Start*/}
-      <div className="row services mb-30">
+      {/* <div className="row services mb-30">
         <div className="col-md-12">
           <div className="subheading">
             <h3>Services</h3>
           </div>
         </div>
-        {/*Service Item*/}
         <div className="col-lg-3 col-sm-6">
           <div className="service-item">
             <div className="icon">
@@ -94,7 +140,6 @@ const About = () => {
             </p>
           </div>
         </div>
-        {/*Service Item*/}
         <div className="col-lg-3 col-sm-6">
           <div className="service-item">
             <div className="icon">
@@ -107,7 +152,6 @@ const About = () => {
             </p>
           </div>
         </div>
-        {/*Service Item*/}
         <div className="col-lg-3 col-sm-6">
           <div className="service-item">
             <div className="icon">
@@ -120,7 +164,6 @@ const About = () => {
             </p>
           </div>
         </div>
-        {/*Service Item*/}
         <div className="col-lg-3 col-sm-6">
           <div className="service-item">
             <div className="icon">
@@ -133,81 +176,76 @@ const About = () => {
             </p>
           </div>
         </div>
-      </div>
+      </div> */}
       {/*Services Row End*/}
       {/*Clients Row Start*/}
-      <div className="row clients mb-70">
+      {/* <div className="row clients mb-70">
         <div className="col-md-12">
           <div className="subheading">
             <h3>Clients</h3>
           </div>
         </div>
         <Swiper {...clientSliderProps} className="">
-          {/*Client Logo*/}
           <SwiperSlide className="client-logo">
             <a href="#">
               <img src="img/clients/client-01.png" alt="" />
             </a>
           </SwiperSlide>
-          {/*Client Logo*/}
           <SwiperSlide className="client-logo">
             <a href="#">
               <img src="img/clients/client-02.png" alt="" />
             </a>
           </SwiperSlide>
-          {/*Client Logo*/}
           <SwiperSlide className="client-logo">
             <a href="#">
               <img src="img/clients/client-03.png" alt="" />
             </a>
           </SwiperSlide>
-          {/*Client Logo*/}
           <SwiperSlide className="client-logo">
             <a href="#">
               <img src="img/clients/client-04.png" alt="" />
             </a>
           </SwiperSlide>
-          {/*Client Logo*/}
+          
           <SwiperSlide className="client-logo">
             <a href="#">
               <img src="img/clients/client-05.png" alt="" />
             </a>
           </SwiperSlide>
-          {/*Client Logo*/}
+          
           <SwiperSlide className="client-logo">
             <a href="#">
               <img src="img/clients/client-06.png" alt="" />
             </a>
           </SwiperSlide>
-          {/*Client Logo*/}
+          
           <SwiperSlide className="client-logo">
             <a href="#">
               <img src="img/clients/client-07.png" alt="" />
             </a>
           </SwiperSlide>
-          {/*Client Logo*/}
+          
           <SwiperSlide className="client-logo">
             <a href="#">
               <img src="img/clients/client-08.png" alt="" />
             </a>
           </SwiperSlide>
-          {/*Client Logo*/}
+          
           <SwiperSlide className="client-logo">
             <a href="#">
               <img src="img/clients/client-09.png" alt="" />
             </a>
           </SwiperSlide>
         </Swiper>
-      </div>
+      </div> */}
       {/*Clients Row End*/}
       {/*Testimonials Row Start*/}
-      <div className="row testimonials mb-50">
+      {/* <div className="row testimonials mb-50">
         <div className="col-md-12">
           <div className="subheading">
             <h3>Testimonials</h3>
           </div>
           <Swiper {...testimonialSliderProps} className="">
-            {/*Testimonail Item*/}
             <SwiperSlide className="testimonial-item">
               <div className="testimonial-content">
                 <p>
@@ -224,7 +262,7 @@ const About = () => {
                 </div>
               </div>
             </SwiperSlide>
-            {/*Testimonail Item*/}
+
             <SwiperSlide className="testimonial-item">
               <div className="testimonial-content">
                 <p>
@@ -241,7 +279,7 @@ const About = () => {
                 </div>
               </div>
             </SwiperSlide>
-            {/*Testimonail Item*/}
+
             <SwiperSlide className="testimonial-item">
               <div className="testimonial-content">
                 <p>
@@ -260,8 +298,7 @@ const About = () => {
             </SwiperSlide>
           </Swiper>
         </div>
-        {/*Testimonials Row End*/}
-      </div>
+      </div> */}
     </SectionContainer>
   );
 };

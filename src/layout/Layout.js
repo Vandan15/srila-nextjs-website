@@ -16,6 +16,11 @@ const PortfolioIsotope = dynamic(
     ssr: false,
   }
 );
+
+const Exhibitions = dynamic(() => import("../components/Exhibitions"), {
+  ssr: false,
+});
+
 const About = dynamic(() => import("../components/About"), {
   ssr: false,
 });
@@ -34,7 +39,8 @@ const Layout = ({ children, noContent }) => {
     <Fragment>
       <VideoPopup />
       <ImageView />
-      <ThemeOptions />
+      {/* theme options */}
+      {/* <ThemeOptions /> */}
       <div id="page">
         <Sidebar />
         <div id="main" className="site-main">
@@ -42,6 +48,7 @@ const Layout = ({ children, noContent }) => {
           {children}
           {!noContent && (
             <Fragment>
+              <Exhibitions />
               <About />
               <Resume />
               <PortfolioIsotope />

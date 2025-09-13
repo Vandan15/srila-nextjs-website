@@ -3,7 +3,7 @@ const PreLoader = () => {
     <div className="preloader">
       <div className="loader">
         {/*Your Name*/}
-        <h4>Philip Watson</h4>
+        <h4>Srila Mookherjee</h4>
         <span />
         <span />
         <span />
