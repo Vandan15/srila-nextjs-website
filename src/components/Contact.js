@@ -1,3 +1,4 @@
+import { EnvelopeIcon } from "@phosphor-icons/react";
 import SectionContainer from "../layout/SectionContainer";
 import { useState } from "react";
 
@@ -83,7 +84,7 @@ const Contact = () => {
   return (
     <SectionContainer
       pageId="contact"
-      pageIcon={"lnr lnr-envelope"}
+      pageIcon={<EnvelopeIcon/>}
       pageTitle={"Contact Me"}
       // map
     >

@@ -1,6 +1,7 @@
 import { Fragment, memo, useState } from "react";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import SectionContainer from "../layout/SectionContainer";
+import { BriefcaseIcon, SuitcaseIcon } from "@phosphor-icons/react";
 
 const imageData = [
   {
@@ -178,7 +179,7 @@ const PortfolioIsotope = () => {
     <Fragment>
       <SectionContainer
         pageId="portfolio"
-        pageIcon={"lnr lnr-briefcase"}
+        pageIcon={<BriefcaseIcon/>}
         pageTitle="Portfolio"
       >
         {/*Portfolio Filter*/}

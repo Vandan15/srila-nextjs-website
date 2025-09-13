@@ -3,12 +3,13 @@ import {
   EnvelopeSimpleIcon,
   HouseIcon,
   MapPinAreaIcon,
+  UserIcon,
 } from "@phosphor-icons/react";
 const About = () => {
   return (
     <SectionContainer
       pageId={"about"}
-      pageIcon={"lnr lnr-user"}
+      pageIcon={<UserIcon/>}
       pageTitle={"About Me"}
     >
       <div className="row about mb-70">

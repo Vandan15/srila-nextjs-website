@@ -1,6 +1,7 @@
 import { Fragment, memo, useState } from "react";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import SectionContainer from "../layout/SectionContainer";
+import { FolderIcon, FoldersIcon } from "@phosphor-icons/react";
 
 const exhibitionData = [
   {
@@ -28,7 +29,7 @@ const Exhibitions = () => {
     <Fragment>
       <SectionContainer
         pageId="exhibitions"
-        pageIcon={"lnr lnr-briefcase"}
+        pageIcon={<FoldersIcon/>}
         pageTitle="Exhibitions"
       >
         <div className="portfolio-items mb-50">
