@@ -2,7 +2,7 @@ const PageHeading = ({ pageIcon, pageTitle }) => {
   return (
     <div className="page-heading">
       <span className="icon">
-        <i className={pageIcon} />
+        {pageIcon}
       </span>
       <h2>{pageTitle}</h2>
     </div>
