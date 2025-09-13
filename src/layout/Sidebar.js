@@ -1,13 +1,24 @@
 import { useContext, useState } from "react";
 import { WatsonContext } from "../context/Context";
 import useClickOutside from "../useClickOutside";
+import { FacebookLogo } from "@phosphor-icons/react";
+import { TwitterLogo } from "@phosphor-icons/react";
+import { YoutubeLogo } from "@phosphor-icons/react";
+import { DribbbleLogo } from "@phosphor-icons/react";
+import { BehanceLogo } from "@phosphor-icons/react";
 
 const menus = [
   { id: 1, icon: "lnr lnr-home", name: "Home", href: "home" },
-  { id: 2, icon: "lnr lnr-user", name: "About Me", href: "about" },
-  { id: 3, icon: "lnr lnr-license", name: "Resume", href: "resume" },
+  {
+    id: 2,
+    icon: "lnr lnr-briefcase",
+    name: "Exhibitions",
+    href: "exhibitions",
+  },
+  { id: 3, icon: "lnr lnr-user", name: "About Me", href: "about" },
+  // { id: 3, icon: "lnr lnr-license", name: "Resume", href: "resume" },
   { id: 4, icon: "lnr lnr-briefcase", name: "Portfolio", href: "portfolio" },
-  { id: 5, icon: "lnr lnr-book", name: "Blog", href: "blog" },
+  // { id: 5, icon: "lnr lnr-book", name: "Blog", href: "blog" },
   { id: 6, icon: "lnr lnr-envelope", name: "Contact", href: "contact" },
 ];
 
@@ -17,6 +28,8 @@ const Sidebar = () => {
   let domNode = useClickOutside(() => {
     setToggle(false);
   });
+  const currentYear = new Date().getFullYear();
+
   return (
     <header>
       <div className={`header-content ${toggle ? "on" : ""}`}>
@@ -25,13 +38,13 @@ const Sidebar = () => {
           <a className="header-toggle" onClick={() => setToggle(!toggle)}>
             <i className="fas fa-bars" />
           </a>
-          <h2>Philip Watson</h2>
+          <h2>Srila Mookherjee</h2>
         </div>
         {/*Main Header*/}
         <div className="header-main" data-simplebar="" ref={domNode}>
           <div className="image-container">
-            <h2 className="header-name">Philip Watson</h2>
-            <img src="img/profile-img.jpg" alt="profile-pic" />
+            <h2 className="header-name">Srila Mookherjee</h2>
+            <img src="img/srila_logo.jpg" alt="profile-pic" />
           </div>
           {/*Nav Menus*/}
           <nav className="nav-menu">
@@ -60,34 +73,34 @@ const Sidebar = () => {
             <ul className="social">
               <li>
                 <a href="#">
-                  <i className="fab fa-facebook-square" />
+                  <FacebookLogo size={20} />
                 </a>
               </li>
               <li>
                 <a href="#">
-                  <i className="fab fa-twitter-square" />
+                  <TwitterLogo size={20} />
                 </a>
               </li>
               <li>
                 <a href="#">
-                  <i className="fab fa-youtube-square" />
+                  <YoutubeLogo size={20} />
                 </a>
               </li>
               <li>
                 <a href="#">
-                  <i className="fab fa-dribbble-square" />
+                  <DribbbleLogo size={20} />
                 </a>
               </li>
               <li>
                 <a href="#">
-                  <i className="fab fa-behance-square" />
+                  <BehanceLogo size={20} />
                 </a>
               </li>
             </ul>
             {/*Copyright Text*/}
             <div className="copy">
               <p>
-                2023 © Marketify-Themes.
+                {currentYear} © Srila Mookherjee.
                 <br />
                 All Right Reserved.
               </p>

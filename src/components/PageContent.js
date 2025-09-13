@@ -4,9 +4,14 @@ import Blog from "./Blog";
 import Contact from "./Contact";
 import PortfolioIsotope from "./PortfolioIsotope";
 import Resume from "./Resume";
+import Exhibitions from "./Exhibitions";
+
 const PageContent = () => {
   return (
     <Fragment>
+      {/*Exhibitions Section Start*/}
+      <Exhibitions />
+      {/*Exhibitions Section End*/}
       {/*About Section Start*/}
       <About />
       {/*About Section Start*/}
