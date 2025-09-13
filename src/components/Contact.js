@@ -84,7 +84,7 @@ const Contact = () => {
     <SectionContainer
       pageId="contact"
       pageIcon={"lnr lnr-envelope"}
-      pageTitle={"Contact Me."}
+      pageTitle={"Contact Me"}
       // map
     >
       <div className="row mb-70">

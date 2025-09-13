@@ -29,7 +29,7 @@ const Exhibitions = () => {
       <SectionContainer
         pageId="exhibitions"
         pageIcon={"lnr lnr-briefcase"}
-        pageTitle="Exhibitions."
+        pageTitle="Exhibitions"
       >
         <div className="portfolio-items mb-50">
           <ResponsiveMasonry

@@ -4,6 +4,24 @@
 @import "swiper/css/scrollbar";
 @import "swiper/css/effect-fade";
 
+/* Poppins Font Global Application */
+* {
+  font-family: var(--font-poppins), sans-serif !important;
+}
+
+body,
+html {
+  font-family: var(--font-poppins), sans-serif !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-poppins), sans-serif !important;
+}
+
+p, span, div, a, button, input, textarea, select {
+  font-family: var(--font-poppins), sans-serif !important;
+}
+
 /* image popup */
 img.mfp-img {
   box-shadow: 0 0 8px rgb(0 0 0 / 60%);

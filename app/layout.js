@@ -1,9 +1,18 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { Poppins } from "next/font/google";
 import WatsonState from "../src/context/Context";
 import PreLoader from "../src/layout/PreLoader";
 import "../styles/globals.css";
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  style: ["normal", "italic"],
+  variable: "--font-poppins",
+  display: "swap",
+});
 
 export default function RootLayout({ children }) {
   const [loader, setLoader] = useState(true);
@@ -38,7 +47,7 @@ export default function RootLayout({ children }) {
           type="image/x-icon"
         />
       </head>
-      <body>
+      <body className={poppins.variable}>
         <WatsonState>
           {loader && <PreLoader />}
           {children}

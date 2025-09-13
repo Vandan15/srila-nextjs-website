@@ -9,7 +9,7 @@ const About = () => {
     <SectionContainer
       pageId={"about"}
       pageIcon={"lnr lnr-user"}
-      pageTitle={"About Us."}
+      pageTitle={"About Me"}
     >
       <div className="row about mb-70">
         <div className="col-lg-8">
