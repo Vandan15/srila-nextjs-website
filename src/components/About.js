@@ -1,21 +1,16 @@
 import SectionContainer from "../layout/SectionContainer";
-import {
-  EnvelopeSimpleIcon,
-  HouseIcon,
-  MapPinAreaIcon,
-  UserIcon,
-} from "@phosphor-icons/react";
+import { UserIcon } from "@phosphor-icons/react";
+
 const About = () => {
   return (
     <SectionContainer
       pageId={"about"}
-      pageIcon={<UserIcon/>}
+      pageIcon={<UserIcon />}
       pageTitle={"About Me"}
     >
-      <div className="row about mb-70">
-        <div className="col-lg-8">
+      <div className="about mb-70">
+        <div>
           {/*Personal Intro*/}
-          <h3 className="mb-20">Artist bio and background</h3>
           <p>
             I first encountered the famed glassmakers of Murano as an
             eleven-year-old girl on a family trip to Venice. From that moment,
@@ -33,7 +28,6 @@ const About = () => {
             observing, learning and working with diverse artists and their
             individual styles and techniques.
           </p>
-          <h3 className="mb-20">Setting up the studio</h3>
           <p>
             In 1987, I returned to Calcutta, armed with a file of photographs,
             technical drawings and detailed notes, determined to set up my own
@@ -50,7 +44,6 @@ const About = () => {
             nearby, allowing me to continue to expand, develop and experiment
             with my art form.
           </p>
-          <h3 className="mb-20">Artist philosophy</h3>
           <p>
             My work is inspired by my passion for both functional art as well as
             for the vessel form - a creative combination of form with function,
@@ -82,44 +75,6 @@ const About = () => {
           </div> */}
         </div>
         {/*Personal Info*/}
-        <div className="col-lg-4">
-          <div className="about-info">
-            <h3 className="mb-20">Contact Information</h3>
-            <ul>
-              <li>
-                <span className="title">
-                  <HouseIcon size={20} />
-                </span>
-                <span className="value">
-                  Physical Address: 4C Bondel Road, Kolkata 700019
-                </span>
-              </li>
-              <li>
-                <span className="title">
-                  <MapPinAreaIcon size={20} />
-                </span>
-                <span className="value">
-                  Postal Address: 3A Lovelock Street, Kolkata 700019
-                </span>
-              </li>
-              <li>
-                <span className="title">
-                  <EnvelopeSimpleIcon size={20} />
-                </span>
-                <span className="value">
-                  <a href="mailto:srila.glass@gmail.com">
-                    srila.glass@gmail.com
-                  </a>
-                </span>
-              </li>
-            </ul>
-            {/* <div className="resume-button mt-30">
-              <a className="btn-main" href="#">
-                Download Resume
-              </a>
-            </div> */}
-          </div>
-        </div>
       </div>
       {/* About Info Row End*/}
       {/*Services Row Start*/}

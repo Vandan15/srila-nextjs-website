@@ -1,13 +1,19 @@
 import { EnvelopeIcon } from "@phosphor-icons/react";
 import SectionContainer from "../layout/SectionContainer";
 import { useState } from "react";
+import {
+  EnvelopeSimpleIcon,
+  HouseIcon,
+  MapPinAreaIcon,
+  UserIcon,
+} from "@phosphor-icons/react";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     subject: "",
-    message: ""
+    message: "",
   });
   const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(false);
@@ -40,15 +46,15 @@ const Contact = () => {
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
-    
+
     if (errors[name]) {
-      setErrors(prev => ({
+      setErrors((prev) => ({
         ...prev,
-        [name]: ""
+        [name]: "",
       }));
     }
   };
@@ -84,24 +90,79 @@ const Contact = () => {
   return (
     <SectionContainer
       pageId="contact"
-      pageIcon={<EnvelopeIcon/>}
+      pageIcon={<EnvelopeIcon />}
       pageTitle={"Contact Me"}
-      // map
     >
-      <div className="row mb-70">
-        <div className="col-lg-8  offset-lg-2">
-          <div className="subheading">
-            <h3>Get In Touch with Me</h3>
+      <div className="row mb-70 gx-5 gy-5 align-items-stretch">
+        {/* Left: Heading, Subheading, Contact Info */}
+        <div className="col-lg-5 col-12">
+          <div className="mb-4">
+            <div className="subheading">
+              <h4>Let's connect.</h4>
+              <p>
+                Ready to commission a custom piece, add to your collection, or
+                discuss exhibition opportunities?
+              </p>
+            </div>
           </div>
-          {/*Form Start*/}
-          <form id="contact-form" onSubmit={handleSubmit}>
+          <div className="row g-3">
+            <div className="col-12 col-md-12">
+              <div className="contact-card-custom">
+                <span className="icon">
+                  <HouseIcon size={32} />
+                </span>
+                <div>
+                  <h5>Physical Address</h5>
+                  <p>4C Bondel Road, Kolkata 700019</p>
+                </div>
+              </div>
+            </div>
+            <div className="col-12 col-md-12">
+              <div className="contact-card-custom">
+                <span className="icon">
+                  <MapPinAreaIcon size={32} />
+                </span>
+                <div>
+                  <h5>Postal Address</h5>
+                  <p>3A Lovelock Street, Kolkata 700019</p>
+                </div>
+              </div>
+            </div>
+            <div className="col-12 col-md-12">
+              <div className="contact-card-custom">
+                <span className="icon">
+                  <EnvelopeSimpleIcon size={32} />
+                </span>
+                <div>
+                  <h5>Email</h5>
+                  <p>
+                    <a href="mailto:srila.glass@gmail.com">
+                      srila.glass@gmail.com
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* Right: Contact Form */}
+        <div className="col-lg-7 col-12">
+          <form
+            id="contact-form"
+            onSubmit={handleSubmit}
+            className="contact-form-custom"
+          >
             <div className="row">
               {/*Name Field*/}
-              <div className="col-md-6 mb-30">
-                <label htmlFor="cf-name" className="field-label mb-0">Name *</label>
+              <div className="col-12 mb-3">
+                <label htmlFor="cf-name" className="field-label mb-0">
+                  Name *
+                </label>
                 <span className="input">
                   <input
-                    className={`input__field cf-validate ${errors.name ? 'error' : ''}`}
+                    className={`input__field cf-validate ${
+                      errors.name ? "error" : ""
+                    }`}
                     type="text"
                     id="cf-name"
                     name="name"
@@ -111,15 +172,21 @@ const Contact = () => {
                     placeholder="Enter your name"
                     required
                   />
-                  {errors.name && <span className="error-message">{errors.name}</span>}
+                  {errors.name && (
+                    <span className="error-message">{errors.name}</span>
+                  )}
                 </span>
               </div>
               {/*Email Field*/}
-              <div className="col-md-6 mb-30">
-                <label htmlFor="cf-email" className="field-label mb-0">Email *</label>
+              <div className="col-12 mb-3">
+                <label htmlFor="cf-email" className="field-label mb-0">
+                  Email *
+                </label>
                 <span className="input">
                   <input
-                    className={`input__field cf-validate ${errors.email ? 'error' : ''}`}
+                    className={`input__field cf-validate ${
+                      errors.email ? "error" : ""
+                    }`}
                     type="email"
                     id="cf-email"
                     name="email"
@@ -129,15 +196,21 @@ const Contact = () => {
                     placeholder="Enter your email"
                     required
                   />
-                  {errors.email && <span className="error-message">{errors.email}</span>}
+                  {errors.email && (
+                    <span className="error-message">{errors.email}</span>
+                  )}
                 </span>
               </div>
               {/*Subject Field*/}
-              <div className="col-md-12 mb-30">
-                <label htmlFor="cf-subject" className="field-label mb-0">Subject *</label>
+              <div className="col-12 mb-3">
+                <label htmlFor="cf-subject" className="field-label mb-0">
+                  Subject *
+                </label>
                 <span className="input">
                   <input
-                    className={`input__field cf-validate ${errors.subject ? 'error' : ''}`}
+                    className={`input__field cf-validate ${
+                      errors.subject ? "error" : ""
+                    }`}
                     type="text"
                     id="cf-subject"
                     name="subject"
@@ -147,15 +220,21 @@ const Contact = () => {
                     placeholder="Enter subject"
                     required
                   />
-                  {errors.subject && <span className="error-message">{errors.subject}</span>}
+                  {errors.subject && (
+                    <span className="error-message">{errors.subject}</span>
+                  )}
                 </span>
               </div>
               {/*Message Box*/}
-              <div className="col-md-12 mb-30">
-                <label htmlFor="cf-message" className="field-label mb-0">Message *</label>
+              <div className="col-12 mb-3">
+                <label htmlFor="cf-message" className="field-label mb-0">
+                  Message *
+                </label>
                 <span className="input">
                   <textarea
-                    className={`input__field cf-validate ${errors.message ? 'error' : ''}`}
+                    className={`input__field cf-validate ${
+                      errors.message ? "error" : ""
+                    }`}
                     id="cf-message"
                     name="message"
                     rows={5}
@@ -165,56 +244,30 @@ const Contact = () => {
                     placeholder="Enter your message"
                     required
                   />
-                  {errors.message && <span className="error-message">{errors.message}</span>}
+                  {errors.message && (
+                    <span className="error-message">{errors.message}</span>
+                  )}
                 </span>
               </div>
-              {/* <div className="alert-container col-md-12">
-                {success && (
-                  <div className="alert alert-success">
-                    Your message has been sent successfully.
-                  </div>
-                )}
-              </div> */}
               {/*Submit Button*/}
-              <div className="col-md-12 text-center">
-                <button 
-                  id="cf-submit" 
-                  className="btn-main"
+              <div className="col-12 text-center">
+                <button
+                  id="cf-submit"
+                  className="btn-main w-100"
                   type="submit"
                   disabled={loading || success}
                 >
-                  {loading ? "Sending..." : success ? "Thank You for your message!" : "Send Message"}
+                  {loading
+                    ? "Sending..."
+                    : success
+                    ? "Thank You for your message!"
+                    : "Send Message"}
                 </button>
               </div>
             </div>
           </form>
-          {/*Form End*/}
         </div>
       </div>
-      {/*Contact Info Row Start*/}
-      {/*<div className="row contact-info mb-70">
-        <div className="col-md-4 info-item">
-          <span className="icon">
-            <i className="fas fa-paper-plane" />
-          </span>
-          <h5>
-            <a href="mailto:example@example.com">example@example.com</a>
-          </h5>
-        </div>
-        <div className="col-md-4 info-item">
-          <span className="icon">
-            <i className="fas fa-map-marker-alt" />
-          </span>
-          <h5>123 Lorem Ipsum, USA</h5>
-        </div>
-        <div className="col-md-4 info-item">
-          <span className="icon">
-            <i className="fas fa-phone" />
-          </span>
-          <h5>(+1) 123 456 7890</h5>
-        </div>
-      </div>*/}
-
       {/*Google Map End*/}
     </SectionContainer>
   );

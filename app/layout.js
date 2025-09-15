@@ -5,6 +5,7 @@ import { Poppins } from "next/font/google";
 import WatsonState from "../src/context/Context";
 import PreLoader from "../src/layout/PreLoader";
 import "../styles/globals.css";
+import "../styles/contact-cards.css";
 
 const poppins = Poppins({
   subsets: ["latin"],
