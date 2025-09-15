@@ -289,13 +289,15 @@ button::-moz-focus-inner {
 /* Main image in popup */
 img.mfp-img {
   width: auto;
-  max-width: 100%;
+  max-width: 95vw;
+  max-height: 85vh;
   height: auto;
   display: block;
   line-height: 0;
   box-sizing: border-box;
-  padding: 40px 0 40px;
+  padding: 10px 0 10px;
   margin: 0 auto;
+  object-fit: contain;
 }
 
 /* The shadow behind the image */
