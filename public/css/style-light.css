@@ -628,12 +628,11 @@ blockquote {
   margin-bottom: 10px;
   font-weight: 700;
 }
-
 .loader span {
   width: 0.6em;
   height: 0.6em;
   margin: 0.19em;
-  background: #007db6;
+  background: #f8d4d6;
   -webkit-border-radius: 0.6em;
   border-radius: 0.6em;
   -webkit-animation: loading 1s infinite alternate;
@@ -641,37 +640,37 @@ blockquote {
 }
 
 .loader span:nth-of-type(2) {
-  background: #008fb2;
+  background: #f2a9ad;
   -webkit-animation-delay: 0.2s;
   animation-delay: 0.2s;
 }
 
 .loader span:nth-of-type(3) {
-  background: #009b9e;
+  background: #eb7e83;
   -webkit-animation-delay: 0.4s;
   animation-delay: 0.4s;
 }
 
 .loader span:nth-of-type(4) {
-  background: #00a77d;
+  background: #e45258;
   -webkit-animation-delay: 0.6s;
   animation-delay: 0.6s;
 }
 
 .loader span:nth-of-type(5) {
-  background: #00b247;
+  background: #dc262d;
   -webkit-animation-delay: 0.8s;
   animation-delay: 0.8s;
 }
 
 .loader span:nth-of-type(6) {
-  background: #5ab027;
+  background: #c61f26;
   -webkit-animation-delay: 1s;
   animation-delay: 1s;
 }
 
 .loader span:nth-of-type(7) {
-  background: #a0b61e;
+  background: #bf1e27;
   -webkit-animation-delay: 1.2s;
   animation-delay: 1.2s;
 }
