@@ -31,8 +31,6 @@ const WatsonHead = () => {
         href={`css/${color}-color.css`}
       />
       {/*Modernizr Js*/}
-      {/*Favicons*/}
-      <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
     </Head>
   );
 };

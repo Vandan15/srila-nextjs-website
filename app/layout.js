@@ -32,21 +32,17 @@ export default function RootLayout({ children }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="utf-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-        <meta
-          name="keywords"
-          content="vcard, resume, personal, portfolio, cv, card, responsive"
-        />
-        <meta name="author" content="cosmos-themes" />
+        <meta name="keywords" content="shreela mookherjee" />
+        <meta property="og:image" content="/img/sm-og-image.jpeg" />
+        <meta property="og:image:alt" content="Srila Mookherjee Logo" />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         <link rel="stylesheet" href="/css/plugins.css" />
         <link rel="stylesheet" href="/css/style-dark.css" />
         <link rel="stylesheet" href="/css/style-light.css" />
         <link rel="stylesheet" href="/css/style-demo.css" />
         <link rel="stylesheet" href="/css/theme-color.css" />
-        <link
-          rel="shortcut icon"
-          href="/img/srila_logo.jpg"
-          type="image/x-icon"
-        />
       </head>
       <body className={poppins.variable}>
         <WatsonState>

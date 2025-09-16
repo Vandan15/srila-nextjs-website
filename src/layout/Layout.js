@@ -8,7 +8,6 @@ import VideoPopup from "../components/VideoPopup";
 import { WatsonContext } from "../context/Context";
 import { pageActiveAnimation, simpleBar } from "../utils";
 import Sidebar from "./Sidebar";
-import ThemeOptions from "./ThemeOptions";
 
 const PortfolioIsotope = dynamic(
   () => import("../components/PortfolioIsotope"),
