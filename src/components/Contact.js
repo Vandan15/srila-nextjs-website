@@ -102,7 +102,7 @@ const Contact = () => {
             discuss exhibition opportunities?
           </p>
         </div>
-        <div className="col-lg-5 col-12">
+        <div className="col-lg-5 col-12 order-2 order-lg-1">
           <div className="row g-3">
             <div className="col-12 col-md-12">
               <div className="contact-card-custom">
@@ -154,7 +154,7 @@ const Contact = () => {
           </div>
         </div>
         {/* Right: Contact Form */}
-        <div className="col-lg-7 col-12">
+        <div className="col-lg-7 col-12 order-1 order-lg-2">
           <form
             id="contact-form"
             onSubmit={handleSubmit}
