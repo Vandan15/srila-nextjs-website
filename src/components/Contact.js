@@ -163,7 +163,7 @@ const Contact = () => {
             <div className="row">
               {/*Name Field*/}
               <div className="col-12 mb-3">
-                <label htmlFor="cf-name" className="field-label mb-0">
+                <label htmlFor="cf-name" className="field-label mb-2">
                   Name *
                 </label>
                 <span className="input">
@@ -187,7 +187,7 @@ const Contact = () => {
               </div>
               {/*Email Field*/}
               <div className="col-12 mb-3">
-                <label htmlFor="cf-email" className="field-label mb-0">
+                <label htmlFor="cf-email" className="field-label mb-2">
                   Email *
                 </label>
                 <span className="input">
@@ -211,7 +211,7 @@ const Contact = () => {
               </div>
               {/*Subject Field*/}
               <div className="col-12 mb-3">
-                <label htmlFor="cf-subject" className="field-label mb-0">
+                <label htmlFor="cf-subject" className="field-label mb-2">
                   Subject *
                 </label>
                 <span className="input">
@@ -235,7 +235,7 @@ const Contact = () => {
               </div>
               {/*Message Box*/}
               <div className="col-12 mb-3">
-                <label htmlFor="cf-message" className="field-label mb-0">
+                <label htmlFor="cf-message" className="field-label mb-2">
                   Message *
                 </label>
                 <span className="input">

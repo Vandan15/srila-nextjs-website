@@ -507,6 +507,7 @@ a:focus {
   background-color: transparent;
   color: #222;
   border-radius: 4px;
+  min-height: 50px;
 }
 
 .input__field.cf-error {
@@ -567,7 +568,7 @@ textarea {
 
 .btn-main:hover,
 .btn-main:focus {
-  color: #fff;
+  color: #bf1e27;
 }
 
 .btn-main:hover:after,
