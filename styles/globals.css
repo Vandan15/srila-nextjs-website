@@ -14,11 +14,23 @@ html {
   font-family: var(--font-poppins), sans-serif !important;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-poppins), sans-serif !important;
 }
 
-p, span, div, a, button, input, textarea, select {
+p,
+span,
+div,
+a,
+button,
+input,
+textarea,
+select {
   font-family: var(--font-poppins), sans-serif !important;
 }
 
@@ -133,7 +145,8 @@ img.mfp-img {
 }
 
 @keyframes pulse {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 0.8;
     transform: scale(1);
   }
@@ -280,9 +293,26 @@ img.mfp-img {
   }
 }
 
-@media (max-width: 768px) {
 .swiper {
   img {
     object-fit: cover;
   }
-}}
+}
+/* Exhibitions Gallery Styles */
+.exhibition-image-item {
+  margin-bottom: 30px;
+  width: 100%;
+}
+.exhibition-image-link {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.exhibition-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  vertical-align: top;
+}

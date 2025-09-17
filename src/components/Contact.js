@@ -7,6 +7,7 @@ import {
   MapPinAreaIcon,
   UserIcon,
 } from "@phosphor-icons/react";
+import Link from "next/link";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -94,17 +95,14 @@ const Contact = () => {
       pageTitle={"Contact Me"}
     >
       <div className="row mb-70 gx-5 gy-5 align-items-stretch">
-        {/* Left: Heading, Subheading, Contact Info */}
+        <div className="subheading">
+          <h4>Let's connect.</h4>
+          <p>
+            Ready to commission a custom piece, add to your collection, or
+            discuss exhibition opportunities?
+          </p>
+        </div>
         <div className="col-lg-5 col-12">
-          <div className="mb-4">
-            <div className="subheading">
-              <h4>Let's connect.</h4>
-              <p>
-                Ready to commission a custom piece, add to your collection, or
-                discuss exhibition opportunities?
-              </p>
-            </div>
-          </div>
           <div className="row g-3">
             <div className="col-12 col-md-12">
               <div className="contact-card-custom">
@@ -113,7 +111,12 @@ const Contact = () => {
                 </span>
                 <div>
                   <h5>Physical Address</h5>
-                  <p>4C Bondel Road, Kolkata 700019</p>
+                  <Link
+                    href="https://maps.app.goo.gl/SQ3a51TiEy5CBFNg7"
+                    target="_blank"
+                  >
+                    4C Bondel Road, Kolkata 700019
+                  </Link>
                 </div>
               </div>
             </div>
@@ -124,7 +127,12 @@ const Contact = () => {
                 </span>
                 <div>
                   <h5>Postal Address</h5>
-                  <p>3A Lovelock Street, Kolkata 700019</p>
+                  <Link
+                    href="https://maps.app.goo.gl/WHS2vzGfdWBqMk1U6"
+                    target="_blank"
+                  >
+                    3A Lovelock Street, Kolkata 700019
+                  </Link>
                 </div>
               </div>
             </div>
@@ -136,7 +144,7 @@ const Contact = () => {
                 <div>
                   <h5>Email</h5>
                   <p>
-                    <a href="mailto:srila.glass@gmail.com">
+                    <a href="mailto:srila.glass@gmail.com" target="_blank">
                       srila.glass@gmail.com
                     </a>
                   </p>
@@ -155,7 +163,7 @@ const Contact = () => {
             <div className="row">
               {/*Name Field*/}
               <div className="col-12 mb-3">
-                <label htmlFor="cf-name" className="field-label mb-0">
+                <label htmlFor="cf-name" className="field-label mb-2">
                   Name *
                 </label>
                 <span className="input">
@@ -179,7 +187,7 @@ const Contact = () => {
               </div>
               {/*Email Field*/}
               <div className="col-12 mb-3">
-                <label htmlFor="cf-email" className="field-label mb-0">
+                <label htmlFor="cf-email" className="field-label mb-2">
                   Email *
                 </label>
                 <span className="input">
@@ -203,7 +211,7 @@ const Contact = () => {
               </div>
               {/*Subject Field*/}
               <div className="col-12 mb-3">
-                <label htmlFor="cf-subject" className="field-label mb-0">
+                <label htmlFor="cf-subject" className="field-label mb-2">
                   Subject *
                 </label>
                 <span className="input">
@@ -227,7 +235,7 @@ const Contact = () => {
               </div>
               {/*Message Box*/}
               <div className="col-12 mb-3">
-                <label htmlFor="cf-message" className="field-label mb-0">
+                <label htmlFor="cf-message" className="field-label mb-2">
                   Message *
                 </label>
                 <span className="input">
