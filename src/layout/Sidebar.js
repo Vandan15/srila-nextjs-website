@@ -15,10 +15,11 @@ import {
 import { TwitterLogoIcon } from "@phosphor-icons/react";
 import { YoutubeLogoIcon } from "@phosphor-icons/react";
 import { DribbbleLogoIcon } from "@phosphor-icons/react";
+import Link from "next/link";
 
 const menus = [
   { id: 1, icon: <HouseLineIcon size={20} />, name: "Home", href: "home" },
-  
+
   {
     id: 4,
     icon: <BriefcaseIcon size={20} />,
@@ -32,7 +33,7 @@ const menus = [
     href: "exhibitions",
   },
   { id: 3, icon: <UserIcon size={20} />, name: "About Me", href: "about" },
-  { 
+  {
     id: 6,
     icon: <EnvelopeSimpleIcon size={20} />,
     name: "Contact",
@@ -54,7 +55,7 @@ const Sidebar = () => {
         {/*Mobile Header*/}
         <div className="header-mobile">
           <a className="header-toggle" onClick={() => setToggle(!toggle)}>
-            <ListIcon color="white" size={20}/>
+            <ListIcon color="white" size={20} />
           </a>
           <h2>Srila Mookherjee</h2>
         </div>
@@ -73,7 +74,7 @@ const Sidebar = () => {
                     href={`#${menu.href}`}
                     onClick={() => {
                       changeSection(menu.href);
-                        setToggle(false);
+                      setToggle(false);
                     }}
                     className={`pt-link ${
                       menu.href === section ? "active" : ""
@@ -122,6 +123,12 @@ const Sidebar = () => {
                 {currentYear} © Srila Mookherjee.
                 <br />
                 All Right Reserved.
+              </p>
+              <p>
+                Made with love by{" "}
+                <Link href="https://thelemontheory.com/" target="_blank">
+                  The Lemon Theory
+                </Link>
               </p>
             </div>
           </div>
