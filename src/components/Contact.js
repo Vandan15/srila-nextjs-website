@@ -20,6 +20,9 @@ const Contact = () => {
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState(false);
 
+  const contactFormEndpoint =
+    process.env.NEXT_PUBLIC_CONTACT_FORM_API_ENDPOINT || "";
+
   const validate = () => {
     const newErrors = {};
 
@@ -62,21 +65,18 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!validate()) return;
+    if (!validate() || !contactFormEndpoint) return;
 
     setLoading(true);
     setSuccess(false);
     try {
-      const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbwnqgBr1O9qpbT0jhnQqZZZ0rOpX5Wem4q_CXtFvItvDGq8r5fiQeGbg3EGUa7D4yIY/exec",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "text/plain",
-          },
-          body: JSON.stringify({ ...formData }),
-        }
-      );
+      const response = await fetch(contactFormEndpoint, {
+        method: "POST",
+        headers: {
+          "Content-Type": "text/plain",
+        },
+        body: JSON.stringify({ ...formData }),
+      });
 
       if (response.ok) {
         setSuccess(true);
