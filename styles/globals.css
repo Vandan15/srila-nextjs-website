@@ -313,6 +313,17 @@ img.mfp-img {
 .exhibition-img {
   width: 100%;
   height: auto;
+  max-height: 600px;
   display: block;
-  vertical-align: top;
+  object-fit: contain;
+  background: #f8fafc;
+  border-radius: 8px;
+  margin: 0 auto;
+  overflow: auto;
+}
+
+@media (max-width: 600px) {
+  .exhibition-img {
+    max-height: 300px;
+  }
 }

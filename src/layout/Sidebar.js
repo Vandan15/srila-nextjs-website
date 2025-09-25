@@ -7,14 +7,10 @@ import {
   FacebookLogoIcon,
   FoldersIcon,
   HouseLineIcon,
-  LineSegmentIcon,
   ListIcon,
-  SidebarIcon,
   UserIcon,
+  InstagramLogo,
 } from "@phosphor-icons/react";
-import { TwitterLogoIcon } from "@phosphor-icons/react";
-import { YoutubeLogoIcon } from "@phosphor-icons/react";
-import { DribbbleLogoIcon } from "@phosphor-icons/react";
 import Link from "next/link";
 
 const menus = [
@@ -92,30 +88,21 @@ const Sidebar = () => {
             {/*Social Links*/}
             <ul className="social">
               <li>
-                <a href="#">
+                <Link
+                  href="https://www.facebook.com/srilaglass/"
+                  target="_blank"
+                >
                   <FacebookLogoIcon size={20} />
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#">
-                  <TwitterLogoIcon size={20} />
-                </a>
+                <Link
+                  href="https://www.instagram.com/srila.glass"
+                  target="_blank"
+                >
+                  <InstagramLogo size={20} />
+                </Link>
               </li>
-              <li>
-                <a href="#">
-                  <YoutubeLogoIcon size={20} />
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <DribbbleLogoIcon size={20} />
-                </a>
-              </li>
-              {/* <li>
-                <a href="#">
-                  <BehanceLogoIco size={20} />
-                </a>
-              </li> */}
             </ul>
             {/*Copyright Text*/}
             <div className="copy">

@@ -1,7 +1,6 @@
 import { Fragment, memo, useState } from "react";
-import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import SectionContainer from "../layout/SectionContainer";
-import { FolderIcon, FoldersIcon } from "@phosphor-icons/react";
+import { FoldersIcon } from "@phosphor-icons/react";
 
 const exhibitionData = [
   {
@@ -14,6 +13,36 @@ const exhibitionData = [
     id: 2,
     src: "/img/exhibitions/exhibitions_Selects_05.jpg",
     alt: "Exhibition Select 05",
+    caption: "Click to View",
+  },
+  {
+    id: 3,
+    src: "/img/exhibitions/srilamookherjee_art_2.jpeg",
+    alt: "Exhibition Art 2",
+    caption: "Click to View",
+  },
+  {
+    id: 4,
+    src: "/img/exhibitions/srilamookherjee_art.jpeg",
+    alt: "Exhibition Art",
+    caption: "Click to View",
+  },
+  {
+    id: 5,
+    src: "/img/exhibitions/srilamookherjee_beyond_furnace.jpeg",
+    alt: "Exhibition Beyond Furnace",
+    caption: "Click to View",
+  },
+  {
+    id: 6,
+    src: "/img/exhibitions/srilamookherjee_fantastical.jpeg",
+    alt: "Exhibition Fantastical",
+    caption: "Click to View",
+  },
+  {
+    id: 7,
+    src: "/img/exhibitions/srilamookherjee_newspaper.jpeg",
+    alt: "Exhibition Newspaper",
     caption: "Click to View",
   },
 ];
