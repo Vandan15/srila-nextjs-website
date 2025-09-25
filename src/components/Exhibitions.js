@@ -18,31 +18,31 @@ const exhibitionData = [
   {
     id: 3,
     src: "/img/exhibitions/srilamookherjee_art_2.jpeg",
-    alt: "Exhibition Select 05",
+    alt: "Exhibition Art 2",
     caption: "Click to View",
   },
   {
     id: 4,
     src: "/img/exhibitions/srilamookherjee_art.jpeg",
-    alt: "Exhibition Select 05",
+    alt: "Exhibition Art",
     caption: "Click to View",
   },
   {
     id: 5,
     src: "/img/exhibitions/srilamookherjee_beyond_furnace.jpeg",
-    alt: "Exhibition Select 05",
+    alt: "Exhibition Beyond Furnace",
     caption: "Click to View",
   },
   {
     id: 6,
     src: "/img/exhibitions/srilamookherjee_fantastical.jpeg",
-    alt: "Exhibition Select 05",
+    alt: "Exhibition Fantastical",
     caption: "Click to View",
   },
   {
     id: 7,
     src: "/img/exhibitions/srilamookherjee_newspaper.jpeg",
-    alt: "Exhibition Select 05",
+    alt: "Exhibition Newspaper",
     caption: "Click to View",
   },
 ];
