@@ -1,22 +1,36 @@
+// For page transition animation
+// export const pageActiveAnimation = (section, pageTransitionAnimation) => {
+//   const sections = document.querySelectorAll(".pt-page"),
+//     delay = "pt-page-delay300",
+//     activeClass = "page-active",
+//     inClass = pageTransitionAnimation.inClass.split(" "),
+//     outClass = pageTransitionAnimation.outClass.split(" ");
+
+//   for (let i = 0; i < sections.length; i++) {
+//     const sectionDom = sections[i];
+//     if (section == sectionDom.getAttribute("id")) {
+//       sectionDom.classList.add(delay, activeClass, ...inClass);
+//       setTimeout(() => {
+//         sectionDom.classList.remove(delay, ...inClass);
+//       }, 1000);
+//     } else {
+//       sectionDom.classList.add(...outClass, delay);
+//       setTimeout(() => {
+//         sectionDom.classList.remove(activeClass, ...outClass, delay);
+//       }, 1000);
+//     }
+//   }
+// };
+
 export const pageActiveAnimation = (section, pageTransitionAnimation) => {
   const sections = document.querySelectorAll(".pt-page"),
-    delay = "pt-page-delay300",
-    activeClass = "page-active",
-    inClass = pageTransitionAnimation.inClass.split(" "),
-    outClass = pageTransitionAnimation.outClass.split(" ");
-
+    activeClass = "page-active";
   for (let i = 0; i < sections.length; i++) {
     const sectionDom = sections[i];
     if (section == sectionDom.getAttribute("id")) {
-      sectionDom.classList.add(delay, activeClass, ...inClass);
-      setTimeout(() => {
-        sectionDom.classList.remove(delay, ...inClass);
-      }, 1000);
+      sectionDom.classList.add(activeClass);
     } else {
-      sectionDom.classList.add(...outClass, delay);
-      setTimeout(() => {
-        sectionDom.classList.remove(activeClass, ...outClass, delay);
-      }, 1000);
+      sectionDom.classList.remove(activeClass);
     }
   }
 };
