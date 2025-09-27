@@ -30,77 +30,88 @@ const sliderImages = [
     src: img1,
     alt: "Ceramic Art Collection",
     title: "Handcrafted Ceramics",
-    description: "Exquisite pottery pieces that blend traditional techniques with contemporary design."
+    description:
+      "Exquisite pottery pieces that blend traditional techniques with contemporary design.",
   },
   {
     id: 2,
     src: img2,
     alt: "Artistic Pottery",
     title: "Artistic Expression",
-    description: "Each piece tells a unique story through form, texture, and artistic vision."
+    description:
+      "Each piece tells a unique story through form, texture, and artistic vision.",
   },
   {
     id: 3,
     src: img3,
     alt: "Clay Mastery",
     title: "Mastery in Clay",
-    description: "Years of dedication and skill captured in every handcrafted ceramic creation."
+    description:
+      "Years of dedication and skill captured in every handcrafted ceramic creation.",
   },
   {
     id: 4,
     src: img4,
     alt: "Contemporary Design",
     title: "Contemporary Forms",
-    description: "Modern interpretations of classical pottery traditions and techniques."
+    description:
+      "Modern interpretations of classical pottery traditions and techniques.",
   },
   {
     id: 5,
     src: img5,
     alt: "Artisan Heritage",
     title: "Artisan Heritage",
-    description: "Preserving and celebrating the rich heritage of ceramic arts and craftsmanship."
+    description:
+      "Preserving and celebrating the rich heritage of ceramic arts and craftsmanship.",
   },
   {
     id: 6,
     src: img6,
     alt: "Elegant Vessels",
     title: "Elegant Vessels",
-    description: "Functional art pieces that bring beauty and elegance to everyday life."
+    description:
+      "Functional art pieces that bring beauty and elegance to everyday life.",
   },
   {
     id: 7,
     src: img7,
     alt: "Creative Vision",
     title: "Creative Vision",
-    description: "Innovative designs that push the boundaries of traditional ceramic art."
+    description:
+      "Innovative designs that push the boundaries of traditional ceramic art.",
   },
   {
     id: 8,
     src: img8,
     alt: "Handmade Excellence",
     title: "Handmade Excellence",
-    description: "Premium quality ceramics crafted with attention to every detail."
+    description:
+      "Premium quality ceramics crafted with attention to every detail.",
   },
   {
     id: 9,
     src: img9,
     alt: "Ceramic Innovation",
     title: "Ceramic Innovation",
-    description: "Exploring new possibilities in ceramic art through experimentation and creativity."
+    description:
+      "Exploring new possibilities in ceramic art through experimentation and creativity.",
   },
   {
     id: 10,
     src: img10,
     alt: "Timeless Beauty",
     title: "Timeless Beauty",
-    description: "Classic designs that transcend trends and celebrate enduring beauty."
+    description:
+      "Classic designs that transcend trends and celebrate enduring beauty.",
   },
   {
     id: 11,
     src: img11,
     alt: "Artistic Legacy",
     title: "Artistic Legacy",
-    description: "Building a lasting legacy through exceptional ceramic artistry and craftsmanship."
+    description:
+      "Building a lasting legacy through exceptional ceramic artistry and craftsmanship.",
   },
 ];
 
@@ -150,19 +161,24 @@ export default function IndexLightSliderPage() {
               {sliderImages?.map((item) => (
                 <SwiperSlide key={item?.id}>
                   <div
-                    style={{ position: 'relative', width: '100%', height: '100%', cursor: 'pointer' }}
+                    style={{
+                      position: "relative",
+                      width: "100%",
+                      height: "100%",
+                      cursor: "pointer",
+                    }}
                     onClick={handleSlideClick}
                   >
                     <Image src={item.src} alt={item.alt} fill priority />
-                    <div className="slide-overlay">
+                    {/* <div className="slide-overlay">
                       <div className="slide-content">
-                        {/* <h1 className="slide-title">{item.title}</h1> */}
+                        <h1 className="slide-title">{item.title}</h1>
                         <div className="slide-hint">
                           <span>{item.title}</span>
                         </div>
                         <p className="slide-description">{item.description}</p>
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 </SwiperSlide>
               ))}
