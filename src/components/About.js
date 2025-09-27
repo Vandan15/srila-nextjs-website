@@ -15,9 +15,9 @@ const About = () => {
             I first encountered the famed glassmakers of Murano as an
             eleven-year-old girl on a family trip to Venice. From that moment,
             the seed was sown. As a young adult, I was keen to explore this
-            medium but, due to the lack of available specialised education in
+            medium but, due to the lack of available specialized education in
             glass in India, I began my training with a diploma in Industrial
-            Design, specializing in Ceramics, from the National Institute of
+            Design, specialising in Ceramics, from the National Institute of
             Design. Inspired and encouraged by an amazing professor I continued
             with my quest which first took me to Finnish Lapland and then
             London, where a serendipitous meeting with glassmaker Anthony Stern
