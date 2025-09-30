@@ -327,3 +327,140 @@ img.mfp-img {
     max-height: 300px;
   }
 }
+
+/* Exhibition Layout Styles */
+.exhibition-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.exhibition-section {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  padding: 32px 24px;
+  margin-bottom: 24px;
+}
+
+.exhibition-section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #222;
+}
+
+.exhibition-section-description {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 24px;
+}
+
+.exhibition-image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 900px) {
+  .exhibition-image-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .exhibition-image-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.exhibition-image-grid .exhibition-image-card {
+  min-width: 0;
+}
+
+.exhibition-image-card {
+  background: #fafafa;
+  border-radius: 10px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.04);
+  border: 1px solid #959595;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.2s;
+}
+.exhibition-image-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.exhibition-image-wrapper {
+  width: 100%;
+  aspect-ratio: 4/3;
+  background: #eaeaea;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.exhibition-img {
+  width: 400px;
+  height: 400px;
+  object-fit: contain;
+  border-radius: 0;
+}
+
+.exhibition-image-info {
+  padding: 16px 12px 12px 12px;
+  text-align: center;
+}
+.exhibition-image-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 6px;
+}
+.exhibition-image-description {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+/* About Page Flex and Profile Image Styles */
+.about-flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 40px;
+}
+.about-flex-content {
+  flex: 1;
+}
+.about-profile-img {
+  min-width: 160px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+.about-profile-img-el {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+@media (max-width: 700px) {
+  .about-flex-row {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .about-profile-img {
+    margin-top: 0;
+    margin-bottom: 24px;
+    order: -1;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .about-flex-content {
+    order: 0;
+  }
+}
