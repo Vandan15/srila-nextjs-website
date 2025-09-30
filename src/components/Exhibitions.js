@@ -2,124 +2,106 @@ import { Fragment, memo, useState } from "react";
 import SectionContainer from "../layout/SectionContainer";
 import { FoldersIcon } from "@phosphor-icons/react";
 
-const exhibitionData = [
+const exhibitionSections = [
   {
-    id: 1,
-    src: "/img/exhibitions/exhibitions_combo.jpg",
-    alt: "Exhibition Combo",
-    caption: "Click to View",
+    title: "FANTASTICAL CREATURES: Tejas Gallery, Kolkata August 2025",
+    description: [
+      "Fantastical Jellyfish",
+      "The fantastical jellyfish are creatures from a dream, with vibrant, otherworldly colours and patterns. The bell-shaped bodies gleam with hues not found in nature and their tendrils twist and glow creating an ethereal, dreamlike presence.",
+      "As a fantastical or spirited animal the jellyfish is a symbol that inspires us to glide through life with grace, faith, strength and a readiness to adapt to whatever comes our way.",
+    ],
+    images: [
+      {
+        src: "/img/exhibitions/srilamookherjee_fantastical.jpeg",
+        alt: "Srila Mookherjee Fantastical",
+      },
+      {
+        src: "/img/exhibitions/srilamookherjee_art.jpeg",
+        alt: "Srila Mookherjee Art",
+      },
+      {
+        src: "/img/exhibitions/srilamookherjee_newspaper.jpeg",
+        alt: "Srila Mookherjee Newspaper",
+      },
+    ],
   },
   {
-    id: 2,
-    src: "/img/exhibitions/exhibitions_Selects_05.jpg",
-    alt: "Exhibition Selects 05",
-    caption: "Click to View",
+    title: "THE HOURGLASS : Bikaner House, December 2023",
+    description: [
+      "A Contemporary Interpretation of the Historical Glass Perfume Bottle.",
+      "These vibrant coloured bottles are made through the glass blowing process. Each is a one-of-a-kind piece inspired by the ancient glass perfume bottles.",
+    ],
+    images: [
+      {
+        src: "/img/exhibitions/hourglass-invitation2.jpeg",
+        alt: "Hourglass Invitation 2 Artwork",
+      },
+      {
+        src: "/img/exhibitions/srilamookherjee-art3.jpeg",
+        alt: "Srila Mookherjee Art",
+      },
+      {
+        src: "/img/exhibitions/srilaglass-art4.jpeg",
+        alt: "Srila Glass Art 4",
+      },
+    ],
   },
   {
-    id: 3,
-    src: "/img/exhibitions/srilamookherjee_art_2.jpeg",
-    alt: "Srila Mookherjee Art 2",
-    caption: "Click to View",
+    title: "BEYOND THE FURNACE: Gallery Art Motif, March 2023",
+    description: [
+      "Srila Mookherjee’s artistic odyssey provides a glimpse into the transformative power of creativity and the ever-evolving nature of artistic expression.",
+      "This exhibition is a narrative that beautifully captures the evolution of her personal journey as an artist in the realm of glass.",
+      "It's a testament to more than three decades of dedication showcasing signature forms and techniques developed over the years.",
+    ],
+    images: [
+      {
+        src: "/img/exhibitions/srilamookherjee_beyond_furnace.jpeg",
+        alt: "Srila Mookherjee Beyond Furnace",
+      },
+    ],
   },
   {
-    id: 4,
-    src: "/img/exhibitions/srilamookherjee_art.jpeg",
-    alt: "Srila Mookherjee Art",
-    caption: "Click to View",
+    title: "GLASS MENAGERIE: Bikaner House, January 2023",
+    description: [
+      "Indian art, both performance and visual based, is centred on the ancient theory of Rasa which means essence which in turn are created by bhavas or the states of mind which evoke the emotions.  Each emotion is represented by a colour and it is through this association that a work of art is crafted by the maker and that evokes a response from the viewer. So, whether it's the ancient Rasa, or the modern mood board, colour represents and arouses emotion both in the creator and in the viewer.",
+      "This collection shows that the artist's perception and viewer's interpretation could be diametrically opposite and yet exist in harmony.",
+    ],
+    images: [
+      {
+        src: "/img/exhibitions/hourglass-save-date.jpeg",
+        alt: "Hourglass Save the Date Artwork",
+      },
+      {
+        src: "/img/exhibitions/hourglass-club.jpeg",
+        alt: "Hourglass Club Artwork",
+      },
+      {
+        src: "/img/exhibitions/srilamookherjee-art5.jpeg",
+        alt: "Srila Mookherjee Art",
+      },
+      {
+        src: "/img/exhibitions/srilamookherjee-art6.jpeg",
+        alt: "Srila Mookherjee Art",
+      },
+    ],
   },
   {
-    id: 5,
-    src: "/img/exhibitions/srilamookherjee_beyond_furnace.jpeg",
-    alt: "Srila Mookherjee Beyond Furnace",
-    caption: "Click to View",
-  },
-  {
-    id: 6,
-    src: "/img/exhibitions/srilamookherjee_fantastical.jpeg",
-    alt: "Srila Mookherjee Fantastical",
-    caption: "Click to View",
-  },
-  {
-    id: 7,
-    src: "/img/exhibitions/srilamookherjee_newspaper.jpeg",
-    alt: "Srila Mookherjee Newspaper",
-    caption: "Click to View",
-  },
-  {
-    id: 8,
-    src: "/img/exhibitions/glass-menargie.jpeg",
-    alt: "Glass Menagerie Artwork",
-    caption: "Click to View",
-  },
-  {
-    id: 9,
-    src: "/img/exhibitions/hourglass-anchor.jpeg",
-    alt: "Hourglass Anchor Artwork",
-    caption: "Click to View",
-  },
-  {
-    id: 10,
-    src: "/img/exhibitions/hourglass-club.jpeg",
-    alt: "Hourglass Club Artwork",
-    caption: "Click to View",
-  },
-  {
-    id: 11,
-    src: "/img/exhibitions/hourglass-event.jpeg",
-    alt: "Hourglass Event Artwork",
-    caption: "Click to View",
-  },
-  {
-    id: 12,
-    src: "/img/exhibitions/hourglass-invitation.jpeg",
-    alt: "Hourglass Invitation Artwork",
-    caption: "Click to View",
-  },
-  {
-    id: 13,
-    src: "/img/exhibitions/hourglass-invitation2.jpeg",
-    alt: "Hourglass Invitation 2 Artwork",
-    caption: "Click to View",
-  },
-  {
-    id: 14,
-    src: "/img/exhibitions/hourglass-save-date.jpeg",
-    alt: "Hourglass Save the Date Artwork",
-    caption: "Click to View",
-  },
-  {
-    id: 15,
-    src: "/img/exhibitions/srilaglass-art4.jpeg",
-    alt: "Srila Glass Art 4",
-    caption: "Click to View",
-  },
-  {
-    id: 16,
-    src: "/img/exhibitions/srilamookherjee-art3.jpeg",
-    alt: "Srila Mookherjee Art 3",
-    caption: "Click to View",
-  },
-  {
-    id: 17,
-    src: "/img/exhibitions/srilamookherjee-art5.jpeg",
-    alt: "Srila Mookherjee Art 5",
-    caption: "Click to View",
-  },
-  {
-    id: 18,
-    src: "/img/exhibitions/srilamookherjee-art6.jpeg",
-    alt: "Srila Mookherjee Art 6",
-    caption: "Click to View",
+    title: "SERENDIPITY: Goa 2019",
+    description: [
+      "The Glass Galaxy",
+      "'The Glass Galaxy' is a tribute to the many dreamers, thinkers, scientists and artists who have brought us closer to the universe we live in.",
+      "The shapes, textures and colours of celestial bodies are a glassblower's dream and the perfect expression of the spectacle that is our cosmic universe. Furthermore, the ethereal and mysterious quality of planets and stars are mirrored in the medium of glass.",
+    ],
+    images: [
+      {
+        src: "/img/exhibitions/exhibitions_combo.jpg",
+        alt: "Exhibition Combo",
+      },
+    ],
   },
 ];
 
 const Exhibitions = () => {
-  const [imagesLoaded, setImagesLoaded] = useState({});
-
-  const handleImageLoad = (id) => {
-    setImagesLoaded((prev) => ({ ...prev, [id]: true }));
-  };
-
   return (
     <Fragment>
       <SectionContainer
@@ -128,17 +110,32 @@ const Exhibitions = () => {
         pageTitle="Exhibitions"
       >
         <div className="portfolio-items mb-50">
-          {exhibitionData.map((item) => (
-            <div className="item exhibition-image-item" key={item.id}>
-              <a className="image-link exhibition-image-link" href={item?.src}>
-                <img
-                  src={item?.src}
-                  alt={item?.alt}
-                  className="exhibition-img"
-                  onLoad={() => handleImageLoad(item.id)}
-                  loading="lazy"
-                />
-              </a>
+          {exhibitionSections.map((section, idx) => (
+            <div className="exhibition-section" key={idx}>
+              <div className="exhibition-section-title">{section.title}</div>
+              <div className="exhibition-section-description">
+                {Array.isArray(section.description) ? (
+                  section.description.map((para, i) => <p key={i}>{para}</p>)
+                ) : (
+                  <p>{section.description}</p>
+                )}
+              </div>
+              <div className="exhibition-image-grid">
+                {section.images.map((img, i) => (
+                  <div className="exhibition-image-card" key={i}>
+                    <a href={img.src} className="exhibition-image-link">
+                      <div className="exhibition-image-wrapper">
+                        <img
+                          src={img.src}
+                          alt={img.alt}
+                          className="exhibition-img"
+                          loading="lazy"
+                        />
+                      </div>
+                    </a>
+                  </div>
+                ))}
+              </div>
             </div>
           ))}
         </div>
