@@ -1,10 +1,12 @@
 import { Fragment, memo, useState } from "react";
 import SectionContainer from "../layout/SectionContainer";
-import { FoldersIcon } from "@phosphor-icons/react";
+import { FoldersIcon, MapPin, CalendarBlank } from "@phosphor-icons/react";
 
 const exhibitionSections = [
   {
-    title: "FANTASTICAL CREATURES: Tejas Gallery, Kolkata August 2025",
+    title: "FANTASTICAL CREATURES",
+    date: "August 2025",
+    location: "Tejas Gallery, Kolkata",
     description: [
       "Fantastical Jellyfish",
       "The fantastical jellyfish are creatures from a dream, with vibrant, otherworldly colours and patterns. The bell-shaped bodies gleam with hues not found in nature and their tendrils twist and glow creating an ethereal, dreamlike presence.",
@@ -26,7 +28,9 @@ const exhibitionSections = [
     ],
   },
   {
-    title: "THE HOURGLASS : Bikaner House, December 2023",
+    title: "THE HOURGLASS",
+    date: "December 2023",
+    location: "Bikaner House",
     description: [
       "A Contemporary Interpretation of the Historical Glass Perfume Bottle.",
       "These vibrant coloured bottles are made through the glass blowing process. Each is a one-of-a-kind piece inspired by the ancient glass perfume bottles.",
@@ -47,9 +51,11 @@ const exhibitionSections = [
     ],
   },
   {
-    title: "BEYOND THE FURNACE: Gallery Art Motif, March 2023",
+    title: "BEYOND THE FURNACE",
+    date: "March 2023",
+    location: "Gallery Art Motif",
     description: [
-      "Srila Mookherjee’s artistic odyssey provides a glimpse into the transformative power of creativity and the ever-evolving nature of artistic expression.",
+      "Srila Mookherjee's artistic odyssey provides a glimpse into the transformative power of creativity and the ever-evolving nature of artistic expression.",
       "This exhibition is a narrative that beautifully captures the evolution of her personal journey as an artist in the realm of glass.",
       "It's a testament to more than three decades of dedication showcasing signature forms and techniques developed over the years.",
     ],
@@ -61,7 +67,9 @@ const exhibitionSections = [
     ],
   },
   {
-    title: "GLASS MENAGERIE: Bikaner House, January 2023",
+    title: "GLASS MENAGERIE",
+    date: "January 2023",
+    location: "Bikaner House",
     description: [
       "Indian art, both performance and visual based, is centred on the ancient theory of Rasa which means essence which in turn are created by bhavas or the states of mind which evoke the emotions.  Each emotion is represented by a colour and it is through this association that a work of art is crafted by the maker and that evokes a response from the viewer. So, whether it's the ancient Rasa, or the modern mood board, colour represents and arouses emotion both in the creator and in the viewer.",
       "This collection shows that the artist's perception and viewer's interpretation could be diametrically opposite and yet exist in harmony.",
@@ -86,7 +94,9 @@ const exhibitionSections = [
     ],
   },
   {
-    title: "SERENDIPITY: Goa 2019",
+    title: "SERENDIPITY",
+    date: "2019",
+    location: "Goa",
     description: [
       "The Glass Galaxy",
       "'The Glass Galaxy' is a tribute to the many dreamers, thinkers, scientists and artists who have brought us closer to the universe we live in.",
@@ -113,6 +123,18 @@ const Exhibitions = () => {
           {exhibitionSections.map((section, idx) => (
             <div className="exhibition-section" key={idx}>
               <div className="exhibition-section-title">{section.title}</div>
+              <div className="exhibition-section-meta">
+                <span className="exhibition-section-location">
+                  <MapPin size={18} weight="bold" />
+                  {section.location}
+                </span>
+                <span className="exhibition-section-date-row">
+                  <CalendarBlank size={18} weight="bold" />
+                  <span className="exhibition-section-date">
+                    {section.date}
+                  </span>
+                </span>
+              </div>
               <div className="exhibition-section-description">
                 {Array.isArray(section.description) ? (
                   section.description.map((para, i) => <p key={i}>{para}</p>)
@@ -143,4 +165,5 @@ const Exhibitions = () => {
     </Fragment>
   );
 };
+
 export default memo(Exhibitions);
