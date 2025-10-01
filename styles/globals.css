@@ -350,6 +350,12 @@ img.mfp-img {
   color: #222;
 }
 
+.exhibition-section-date {
+  color: #888;
+  font-size: 1rem;
+  margin-bottom: 0.5em;
+}
+
 .exhibition-section-description {
   font-size: 1rem;
   color: #555;
@@ -423,44 +429,121 @@ img.mfp-img {
   font-size: 0.95rem;
   color: #666;
 }
-
 /* About Page Flex and Profile Image Styles */
 .about-flex-row {
   display: flex;
-  flex-direction: row;
   align-items: flex-start;
-  gap: 40px;
+  flex-wrap: wrap;
+  gap: 32px;
 }
+
 .about-flex-content {
   flex: 1;
+  min-width: 240px;
+  width: 100%;
 }
+
 .about-profile-img {
-  min-width: 160px;
-  margin-top: 10px;
-  display: flex;
-  justify-content: center;
+  min-width: 220px;
+  margin-right: 40px;
+  margin-bottom: 24px;
+  width: 100%;
+  max-width: 340px;
+  align-self: flex-start;
 }
+
 .about-profile-img-el {
-  width: 160px;
-  height: 160px;
+  width: 100%;
+  max-width: 220px;
+  height: 300px;
   object-fit: cover;
-  border-radius: 50%;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  display: block;
+  margin: 0 auto;
 }
+
+.about-description {
+  font-size: 1rem;
+  color: #444;
+}
+
+.about-readmore-link,
+.about-readless-link {
+  color: #bf1e27;
+  font-weight: 500;
+  text-decoration: underline;
+  display: inline-block;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.about-readmore-link:hover,
+.about-readless-link:hover {
+  color: #92161c;
+}
+.about-actions {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.about-collab-btn {
+  background-color: #bf1e27;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 500;
+  text-align: center;
+  transition: background 0.2s;
+}
+
+.about-collab-btn:hover {
+  color: #fff;
+  background-color: #92161c;
+}
+
+.about-portfolio-btn {
+  border: 2px solid #bf1e27;
+  color: #bf1e27;
+  background: #fff;
+  border-radius: 8px;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 500;
+  text-align: center;
+  transition: background 0.2s, color 0.2s;
+}
+
+.about-portfolio-btn:hover {
+  background: #bf1e27;
+  color: #fff;
+}
+
+/* Responsive Fix */
 @media (max-width: 700px) {
   .about-flex-row {
     flex-direction: column;
     gap: 24px;
   }
   .about-profile-img {
-    margin-top: 0;
-    margin-bottom: 24px;
-    order: -1;
-    display: flex;
-    justify-content: center;
-    width: 100%;
+    margin-right: 0;
+    margin-bottom: 16px;
+    max-width: 100%;
+    text-align: center;
   }
+  /* for full width image in responsive view */
+  /* .about-profile-img-el {
+    max-width: 100%;
+    height: auto;
+  } */
   .about-flex-content {
-    order: 0;
+    width: 100%;
   }
 }
