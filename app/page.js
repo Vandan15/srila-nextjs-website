@@ -19,7 +19,6 @@ import img8 from "../src/images/home/Srila_20_10_21_00016.jpg";
 import img9 from "../src/images/home/Srila_Mookherjee_00021.jpg";
 import img10 from "../src/images/home/Srila_Mookherjee_00047.jpg";
 import img11 from "../src/images/home/Srila_Mookherjee_00088.jpg";
-import Image from "next/image";
 
 // Install Swiper modules
 SwiperCore.use([Autoplay, EffectFade]);
@@ -160,25 +159,12 @@ export default function IndexLightSliderPage() {
             >
               {sliderImages?.map((item) => (
                 <SwiperSlide key={item?.id}>
-                  <div
-                    style={{
-                      position: "relative",
-                      width: "100%",
-                      height: "100%",
-                      cursor: "pointer",
-                    }}
-                    onClick={handleSlideClick}
-                  >
-                    <Image src={item.src} alt={item.alt} fill priority />
-                    {/* <div className="slide-overlay">
-                      <div className="slide-content">
-                        <h1 className="slide-title">{item.title}</h1>
-                        <div className="slide-hint">
-                          <span>{item.title}</span>
-                        </div>
-                        <p className="slide-description">{item.description}</p>
-                      </div>
-                    </div> */}
+                  <div className="slide-container" onClick={handleSlideClick}>
+                    <img
+                      src={item.src.src}
+                      alt={item.alt}
+                      className="slide-image"
+                    />
                   </div>
                 </SwiperSlide>
               ))}

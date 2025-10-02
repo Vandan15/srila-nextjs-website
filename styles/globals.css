@@ -4,6 +4,31 @@
 @import "swiper/css/scrollbar";
 @import "swiper/css/effect-fade";
 
+/* Hero Slider Responsive Styles */
+.slide-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: #000;
+}
+
+.slide-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Mobile - Contain to fit full image */
+@media (max-width: 768px) {
+  .slide-image {
+    object-fit: contain !important;
+  }
+}
+
 /* Poppins Font Global Application */
 * {
   font-family: var(--font-poppins), sans-serif !important;
