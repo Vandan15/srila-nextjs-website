@@ -13,7 +13,7 @@ const aboutParas = [
 ];
 
 const About = () => {
-  const [showMore, setShowMore] = useState(false);
+  const [showMore, setShowMore] = useState(true);
   const { changeSection } = useContext(WatsonContext);
 
   return (

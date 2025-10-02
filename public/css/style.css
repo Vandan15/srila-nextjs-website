@@ -1314,7 +1314,7 @@ header .header-mobile .header-toggle i {
   position: relative;
   display: block;
   background-color: #2c2d2f;
-  border: 1px solid #222324;
+  /* border: 1px solid #222324; */
   margin-bottom: 50px;
   overflow: hidden;
 }
