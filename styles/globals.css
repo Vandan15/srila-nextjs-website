@@ -92,7 +92,7 @@ img.mfp-img {
 #slides,
 #slides .swiper,
 #slides img {
-  max-height: 100vh;
+  height: 100vh;
   object-fit: contain;
 }
 
