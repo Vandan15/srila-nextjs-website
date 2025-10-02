@@ -1,7 +1,8 @@
 import SectionContainer from "../layout/SectionContainer";
 import { UserIcon } from "@phosphor-icons/react";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { WatsonContext } from "../context/Context";
 
 const aboutParas = [
   `I first encountered the famed glassmakers of Murano as an eleven-year-old girl on a family trip to Venice. From that moment, the seed was sown. As a young adult, I was keen to explore this medium but, due to the lack of available specialized education in glass in India, I began my training with a diploma in Industrial Design, specialising in Ceramics, from the National Institute of Design. Inspired and encouraged by an amazing professor I continued with my quest which first took me to Finnish Lapland and then London, where a serendipitous meeting with glassmaker Anthony Stern changed my life forever. I began as an apprentice in his studio and after a spellbinding year of interning with him, I moved on to The Glasshouse, a co-operative of 4 glassmakers based in Covent Garden, London. There I had the opportunity to further explore the medium - observing, learning and working with diverse artists and their individual styles and techniques.`,
@@ -13,6 +14,7 @@ const aboutParas = [
 
 const About = () => {
   const [showMore, setShowMore] = useState(false);
+  const { changeSection } = useContext(WatsonContext);
 
   return (
     <SectionContainer
@@ -65,10 +67,24 @@ const About = () => {
               )}
             </div>
             <div className="about-actions">
-              <a className="about-collab-btn" href="#contact">
+              <a
+                className="about-collab-btn"
+                href="#contact"
+                onClick={(e) => {
+                  e.preventDefault();
+                  changeSection("contact");
+                }}
+              >
                 Let's Collaborate
               </a>
-              <a className="about-portfolio-btn" href="#portfolio">
+              <a
+                className="about-portfolio-btn"
+                href="#portfolio"
+                onClick={(e) => {
+                  e.preventDefault();
+                  changeSection("portfolio");
+                }}
+              >
                 View Portfolio
               </a>
             </div>
