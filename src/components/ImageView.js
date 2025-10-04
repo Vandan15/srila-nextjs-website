@@ -1,5 +1,6 @@
 import { Fragment, useEffect, useState } from "react";
 import useClickOutside from "../useClickOutside";
+import { X } from "@phosphor-icons/react";
 
 const ImgViews = ({ close, src }) => {
   let domNode = useClickOutside(() => {
@@ -19,6 +20,9 @@ const ImgViews = ({ close, src }) => {
           <div className="mfp-content" ref={domNode}>
             <div className="mfp-iframe-scaler">
               <img className="mfp-img" src={src} />
+              <button className="mfp-close-img" onClick={() => close(false)}>
+                <X size={20} weight="bold" />
+              </button>
             </div>
           </div>
           <div className="mfp-preloader">Loading...</div>
