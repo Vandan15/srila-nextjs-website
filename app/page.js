@@ -7,7 +7,7 @@ import { WatsonContext } from "../src/context/Context";
 import Layout from "../src/layout/Layout";
 import { heroSlider } from "../src/sliderProps";
 import { defaultPageAnimationByPageName } from "../src/utils";
-
+import ResponsiveImage from "../src/components/ResponsiveImage";
 import img1 from "../src/images/home/4F3A0918.jpg";
 import img2 from "../src/images/home/IMG_5489.jpg";
 import img3 from "../src/images/home/IMG_5495.jpg";
@@ -19,6 +19,12 @@ import img8 from "../src/images/home/Srila_20_10_21_00016.jpg";
 import img9 from "../src/images/home/Srila_Mookherjee_00021.jpg";
 import img10 from "../src/images/home/Srila_Mookherjee_00047.jpg";
 import img11 from "../src/images/home/Srila_Mookherjee_00088.jpg";
+import art1 from "../src/images/home/art1_mobile.jpeg";
+import art2 from "../src/images/home/art2_mobile.jpeg";
+import art3 from "../src/images/home/art3_mobile.jpeg";
+import art4 from "../src/images/home/art4_mobile.jpeg";
+import art5 from "../src/images/home/art5_mobile.jpeg";
+import art6 from "../src/images/home/art6_mobile.jpeg";
 
 // Install Swiper modules
 SwiperCore.use([Autoplay, EffectFade]);
@@ -27,6 +33,7 @@ const sliderImages = [
   {
     id: 1,
     src: img1,
+    mobileSrc: art6,
     alt: "Ceramic Art Collection",
     title: "Handcrafted Ceramics",
     description:
@@ -35,6 +42,7 @@ const sliderImages = [
   {
     id: 2,
     src: img2,
+    mobileSrc: undefined,
     alt: "Artistic Pottery",
     title: "Artistic Expression",
     description:
@@ -43,6 +51,7 @@ const sliderImages = [
   {
     id: 3,
     src: img3,
+    mobileSrc: undefined,
     alt: "Clay Mastery",
     title: "Mastery in Clay",
     description:
@@ -51,6 +60,7 @@ const sliderImages = [
   {
     id: 4,
     src: img4,
+    mobileSrc: undefined,
     alt: "Contemporary Design",
     title: "Contemporary Forms",
     description:
@@ -59,6 +69,7 @@ const sliderImages = [
   {
     id: 5,
     src: img5,
+    mobileSrc: art1,
     alt: "Artisan Heritage",
     title: "Artisan Heritage",
     description:
@@ -67,6 +78,7 @@ const sliderImages = [
   {
     id: 6,
     src: img6,
+    mobileSrc: undefined,
     alt: "Elegant Vessels",
     title: "Elegant Vessels",
     description:
@@ -75,6 +87,7 @@ const sliderImages = [
   {
     id: 7,
     src: img7,
+    mobileSrc: undefined,
     alt: "Creative Vision",
     title: "Creative Vision",
     description:
@@ -83,6 +96,7 @@ const sliderImages = [
   {
     id: 8,
     src: img8,
+    mobileSrc: art3,
     alt: "Handmade Excellence",
     title: "Handmade Excellence",
     description:
@@ -91,6 +105,7 @@ const sliderImages = [
   {
     id: 9,
     src: img9,
+    mobileSrc: art5,
     alt: "Ceramic Innovation",
     title: "Ceramic Innovation",
     description:
@@ -99,6 +114,7 @@ const sliderImages = [
   {
     id: 10,
     src: img10,
+    mobileSrc: art2,
     alt: "Timeless Beauty",
     title: "Timeless Beauty",
     description:
@@ -107,6 +123,7 @@ const sliderImages = [
   {
     id: 11,
     src: img11,
+    mobileSrc: art4,
     alt: "Artistic Legacy",
     title: "Artistic Legacy",
     description:
@@ -160,11 +177,17 @@ export default function IndexLightSliderPage() {
               {sliderImages?.map((item) => (
                 <SwiperSlide key={item?.id}>
                   <div className="slide-container" onClick={handleSlideClick}>
-                    <img
-                      src={item.src.src}
+                    <ResponsiveImage
+                      desktopSrc={item.src}
+                      mobileSrc={item.mobileSrc}
                       alt={item.alt}
                       className="slide-image"
                     />
+                    {/* <img
+                      src={item.src.src}
+                      alt={item.alt}
+                      className="slide-image"
+                    /> */}
                   </div>
                 </SwiperSlide>
               ))}
