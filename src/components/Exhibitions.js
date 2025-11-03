@@ -30,7 +30,7 @@ const exhibitionSections = [
   {
     title: "THE HOURGLASS",
     date: "December 2023",
-    location: "Bikaner House",
+    location: "Bikaner House, New Delhi",
     description: [
       "A Contemporary Interpretation of the Historical Glass Perfume Bottle.",
       "These vibrant coloured bottles are made through the glass blowing process. Each is a one-of-a-kind piece inspired by the ancient glass perfume bottles.",
@@ -52,8 +52,8 @@ const exhibitionSections = [
   },
   {
     title: "BEYOND THE FURNACE",
-    date: "March 2023",
-    location: "Gallery Art Motif",
+    date: "March 2024",
+    location: "Gallery Art Motif, New Delhi",
     description: [
       "Srila Mookherjee's artistic odyssey provides a glimpse into the transformative power of creativity and the ever-evolving nature of artistic expression.",
       "This exhibition is a narrative that beautifully captures the evolution of her personal journey as an artist in the realm of glass.",
@@ -69,7 +69,7 @@ const exhibitionSections = [
   {
     title: "GLASS MENAGERIE",
     date: "January 2023",
-    location: "Bikaner House",
+    location: "Bikaner House, New Delhi",
     description: [
       "Indian art, both performance and visual based, is centred on the ancient theory of Rasa which means essence which in turn are created by bhavas or the states of mind which evoke the emotions.  Each emotion is represented by a colour and it is through this association that a work of art is crafted by the maker and that evokes a response from the viewer. So, whether it's the ancient Rasa, or the modern mood board, colour represents and arouses emotion both in the creator and in the viewer.",
       "This collection shows that the artist's perception and viewer's interpretation could be diametrically opposite and yet exist in harmony.",
