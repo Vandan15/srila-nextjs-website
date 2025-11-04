@@ -28,6 +28,22 @@ const exhibitionSections = [
     ],
   },
   {
+    title: "BEYOND THE FURNACE",
+    date: "March 2024",
+    location: "Gallery Art Motif, New Delhi",
+    description: [
+      "Srila Mookherjee's artistic odyssey provides a glimpse into the transformative power of creativity and the ever-evolving nature of artistic expression.",
+      "This exhibition is a narrative that beautifully captures the evolution of her personal journey as an artist in the realm of glass.",
+      "It's a testament to more than three decades of dedication showcasing signature forms and techniques developed over the years.",
+    ],
+    images: [
+      {
+        src: "/img/exhibitions/srilamookherjee_beyond_furnace.jpeg",
+        alt: "Srila Mookherjee Beyond Furnace",
+      },
+    ],
+  },
+  {
     title: "THE HOURGLASS",
     date: "December 2023",
     location: "Bikaner House, New Delhi",
@@ -47,22 +63,6 @@ const exhibitionSections = [
       {
         src: "/img/exhibitions/srilaglass-art4.jpeg",
         alt: "Srila Glass Art 4",
-      },
-    ],
-  },
-  {
-    title: "BEYOND THE FURNACE",
-    date: "March 2024",
-    location: "Gallery Art Motif, New Delhi",
-    description: [
-      "Srila Mookherjee's artistic odyssey provides a glimpse into the transformative power of creativity and the ever-evolving nature of artistic expression.",
-      "This exhibition is a narrative that beautifully captures the evolution of her personal journey as an artist in the realm of glass.",
-      "It's a testament to more than three decades of dedication showcasing signature forms and techniques developed over the years.",
-    ],
-    images: [
-      {
-        src: "/img/exhibitions/srilamookherjee_beyond_furnace.jpeg",
-        alt: "Srila Mookherjee Beyond Furnace",
       },
     ],
   },
